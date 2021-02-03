@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition : css</title>
+</head>
+<body>
+    <h1>transition</h1>
+
+    <div class="wrap">
+        <div class="t1">1</div>
+        <div class="t2">2</div>
+        <div class="t3">3</div>
+    </div>
+    <style>
+        .t1 {
+            transform: translateY(50px);opacity: 0; 
+            transition: transform 1s, opacity .5s;
+            transition-timing-function: ease-in;
+        }
+        .t2 {
+            transform: translateY(-50px) rotate(45deg);opacity: 0;
+            transition: transform 1s, opacity .5s;
+            transition-timing-function: ease-out;
+            transition-delay: .5s;
+        }
+        .t3 {
+            transform: translateX(120px);opacity: 0;
+            transition: transform 1s, opacity .5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+        }
+        .wrap:hover .t1 {transform: translateY(0);opacity: 1;}
+        .wrap:hover .t2 {transform: translateY(0) rotate(0);opacity: 1;}
+        .wrap:hover .t3 {transform: translateX(0);opacity: 1;}
+
+        .wrap {
+            overflow: hidden;
+            display: flex; justify-content: space-between;
+            width: 400px;
+            background: #eee;
+        }
+        .wrap div {
+            width: 100px; height: 100px;
+            background: tomato;
+            text-align: center; line-height: 100px;
+        }
+    </style>
+    
+</body>
+</html>

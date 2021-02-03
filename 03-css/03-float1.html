@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float : css</title>
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #000;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>float</h1>
+    <header class="header1">
+        <h1>로고</h1>
+        <nav>메뉴</nav>
+    </header>
+    
+    <style>
+        /* float 해제 방법 1 : 높이 값이 넣어준다. */
+        .header1 {background: tomato; height: 80px;}
+        .header1 h1 {float: left;}
+        .header1 nav {float: right;}
+    </style>
+
+    
+    <header class="header2">
+        <h1>로고</h1>
+        <nav>메뉴</nav>
+    </header>
+    <style>
+        /* float 해제 방법 2 : overflow: hidden */
+        .header2 {background: blue; overflow: hidden;}
+        .header2 h1 {float: left;}
+        .header2 nav {float: left;}
+    </style>
+
+<header class="header3 clearfix">
+    <h1>로고</h1>
+    <nav>메뉴</nav>
+</header>
+<style>
+    /* float 해제 방법 3 :  clearfix*/
+    .header3 {background: greenyellow;}
+    .header3 h1 {float: right;}
+    .header3 nav {float: right;}
+    .clearfix::after {
+        display: table;
+        content: "";
+        clear: both;
+    }
+</style>
+
+
+    
+    <div class="container clear-g">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+    </div>
+
+    
+</body>
+</html>

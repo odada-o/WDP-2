@@ -1,0 +1,56 @@
+// 사이트의 공통부분
+// header, footer, btn, tab
+@charset "UTF-8";
+@import url(../css/reset.css);
+@import 'main';
+@import 'contents';
+
+.wrap {
+    width: $wrapWidth; margin: 0 auto;
+}
+header {
+    display: flex; justify-content: space-between;
+    height: 200px;
+    background: $green;
+    h1 {
+        // scss에서만 보여짐
+        width: $wrapWidth / 3; // width : 400px
+    }
+    #gnb {
+        /* css에서도 보여짐 */
+        width: $wrapWidth / 2; /* width : 600px */
+        height: 100px;
+        background: $tomato;
+        li {
+            float: left;
+        }
+        a {
+            display: block;
+            // a:hover {}
+            &:hover {
+                color: $tomato;
+            }
+        }
+    }
+}
+
+.sec-g {
+    // 형제 클래스 선택
+    // <div class="sec-g sec-sns">
+    &.sec-sns {
+        // .sec-g.sec-sns > h2
+        .sec-tit {
+            font-size: 30px; color: $green;
+        }
+    }
+    // .sec-g > h2
+    h2 {
+        padding-bottom: 5px;
+        font-size: 20px; font-weight: bold; text-align: center;
+        // h2::after 가상 클래스 추가
+        &::after {
+            border-bottom: 3px solid $tomato;
+        }
+    }
+
+}

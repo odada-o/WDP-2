@@ -1,0 +1,13 @@
+// 메인페이지의 공통 부분을 뺀 나머지 부분
+@import 'variables';
+
+.sec-g {
+    .sec-cont {
+        background: $gray;
+    }
+
+    .sec-tit {
+        
+        color:purple;
+    }
+}

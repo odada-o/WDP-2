@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0; padding: 0;
+    font-size: 40px;
+    list-style: none;
+}
+.wrap {
+    width: 1200px;
+    margin: auto;
+    border: 1px solid #000;
+}
+header {
+    display: flex; justify-content: space-between;
+    height: 100px;
+    background: #eee;
+}
+nav {
+    width: 60%;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+.slide {
+    height: 300px;
+    background: orange;
+}
+.container {
+    display: flex; justify-content: space-between;
+    height: 200px;
+}
+/* 한칸 띄면 자손 중... section 찾기 */
+.container section {
+    width: 30%; background: rgb(213, 246, 231);
+}
+footer {
+    height: 100px;
+    background: gray;
+}

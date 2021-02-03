@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get and Set CSS Classes : js</title>
+    <script src="./dist/js/jquery-3.5.1.min.js"></script>
+    <style>
+        * {
+            margin: 0; padding: 0;
+            font-size: 16px;line-height: 1.5;
+            text-decoration: none; color: #000;
+            list-style: none; box-sizing: border-box;
+        }
+        .nav-depth1 {
+            display: flex;justify-content: space-between;
+        }
+        .nav-depth1 li {
+            width: 25%; padding: 20px 0;
+            background: #eee;
+            text-align: center;
+        }
+        .nav-depth1 li.on {
+            background: tomato;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>css 추가, 삭제</h1>
+    <h2>nav : 클릭했을 때</h2>
+    <nav>
+        <ul class="nav-depth1">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+        </ul>
+    </nav>
+    <script>
+        $('.nav-depth1 li').eq(0).addClass('on')
+
+        $('.nav-depth1 li').click(function(){
+            $('.nav-depth1 li').removeClass('on')
+            // 방금 내가 클릭한 그 아이...
+            $(this).addClass('on')
+        })
+
+    </script>
+
+    <hr>
+    <h2>nav : 마우스 오버</h2>
+    <style>
+        .nav2  {
+            display: flex;justify-content: space-between;
+        }
+        .nav2 > li {
+            position: relative;
+            flex-grow: 1;
+            background: #333; 
+        }
+        .nav2 > li.on {
+            background: slateblue;
+        }
+        .nav2 > li.on > ul {
+            display: block;
+        }
+        .nav2 > li > a {
+            display: block;
+            padding: 10px 0;
+            color: #fff; text-align: center;
+        }
+        .nav2 > li > ul {
+            display: none;
+            position: absolute;top: 44px;left: 0;right: 0;
+            padding: 10px 0;
+            background: #eee;
+            text-align: center;
+        }
+    </style>
+    <nav>
+        <ul class="nav2">
+            <li>
+                <a href="#">menu1</a>
+                <ul>
+                    <li><a href="#">menu1-1</a></li>
+                    <li><a href="#">menu1-1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu2</a>
+                <ul>
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu3</a>
+                <ul>
+                    <li><a href="#">menu3-1</a></li>
+                    <li><a href="#">menu3-1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu4</a>
+                <ul>
+                    <li>
+                        <a href="#">menu4-1</a></li>
+                    <li><a href="#">menu4-1</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        $('.nav2 > li > a')
+        .on('mouseenter focus', function(){
+            $('.nav2 > li').removeClass('on')
+            $(this).parent().addClass('on') /* depth1 li */
+        })
+
+    </script>
+    <br><br><br><br><br><br><br><br>
+</body>
+</html>

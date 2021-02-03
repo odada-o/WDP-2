@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Coming+Soon&display=swap');
+
+ul li {
+    margin-bottom: 10px;
+    background: #eee;
+}
+/* ul의 자식 중 li만 선택 */
+.nav-depth1 > li {
+    border: 1px solid #000;
+}
+.nav-depth1 > li > a {
+    background: tomato;
+}
+
+nav .nav-depth2 a {
+    background: aqua;
+}

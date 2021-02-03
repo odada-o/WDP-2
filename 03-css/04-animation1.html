@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>ANIMATION</title> 
+
+</head> 
+<body>
+
+    <div class="box">
+        <div class="square"></div>
+        <div class="circle"></div>
+    </div>
+
+    <style>
+        .box {
+            position: relative; overflow: hidden;
+            width: 80%; height: 500px; margin: auto;
+            background: #eee;
+        }
+        .square {
+            position: absolute;top: 0;left: -110px;
+            width: 200px;height: 200px;opacity: 0;
+            background: rgba(0, 174, 255, 0.5);
+            animation: ani-s 1.5s 1s forwards;
+        }
+        @keyframes ani-s {
+            0% {top: 0;left: -110px;opacity: 0;}
+            100% {top: 90px;left: 200px;opacity: 1;}
+        }
+        .circle {
+            position: absolute;top: 0;left: 100%;
+            width: 200px;height: 200px;
+            border-radius: 50%;opacity: 0;
+            background: rgba(255, 182, 193, 0.4);
+            animation: ani-c 2s .5s forwards;
+        }
+        @keyframes ani-c {
+            0% {top: 0;left: 100%;opacity: 0;}
+            100% {top: 160px;left: 310px;opacity: 1;}
+        }
+
+    </style>
+
+
+    <br><br>
+
+
+
+    <div class="wrap">
+        <p>
+            Animation..
+        </p>
+    </div>
+    <style>
+        .wrap {
+            position: relative;
+            width: 500px;height: 500px;
+            background: #eee;
+        }
+        p {
+            position: absolute;top: 0;left: 0;
+            width: 200px;height: 100px;
+            background: red; 
+            color: #fff; text-align: center; line-height: 100px;
+            animation-name: ani-box;
+            animation-duration: 4s;
+        }
+        @keyframes ani-box {
+            0% {background: red;top: 0;left: 0;}
+            25% {background: yellow;top: 0;left: 100%;}
+            50% {background: green;top: 100%;left: 100%;}
+            75% {background: blue;top: 100%;left: 0;}
+            100% {background: purple;top: 0;left: 0;}
+        }
+    </style>
+    
+
+    
+    
+
+    
+</body> 
+</html>

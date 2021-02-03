@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 : html</title>
+</head>
+<body>
+    <h1>테이블</h1>
+
+    <table border="1" cellspacing="1">
+        <caption>테이블 설명</caption>
+        <colgroup>
+            <!-- <col width="50%"> -->
+            <col span="3" width="30%">
+        </colgroup>
+        <thead>
+            <!-- 행 -->
+            <tr>
+                <th scope="row">과목</th><!-- 열 -->
+                <th scope="row">오다다</th>
+                <th scope="row">진(bts)</th>
+            </tr>
+            <!-- //행 -->
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="col">국어</td>
+                <td>80점</td>
+                <td>90점</td>
+            </tr>
+            <tr>
+                <td scope="col">수학</td>
+                <td>60점</td>
+                <td>50점</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td scope="col">총점</td>
+                <td>140점</td>
+                <td>140점</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    <style>
+        table {
+            border: 1px solid #000;
+        }
+    </style>
+
+    <hr>
+    <table border="1" cellspacing="1">
+        <caption>테이블 설명</caption>
+        <colgroup>
+            <!-- <col width="50%"> -->
+            <col span="3" width="30%">
+        </colgroup>
+        <thead>
+            <!-- 행 -->
+            <tr>
+                <th scope="row">과목</th><!-- 열 -->
+                <th scope="row" colspan="2">오다다</th>
+            </tr>
+            <!-- //행 -->
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="col" rowspan="2">국어</td>
+                <td>80점</td>
+                <td rowspan="2">90점</td>
+            </tr>
+            <tr>
+                <td>60점</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td scope="col">총점</td>
+                <td>140점</td>
+                <td>140점</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

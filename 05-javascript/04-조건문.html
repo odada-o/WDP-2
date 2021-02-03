@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 : js</title>
+    <script>
+        // if문
+        let a = 1;
+
+        // if(조건){실행문}
+        if(a+1 === 2){
+            // 참이라면
+            console.log('a + 1은 2입니다.')
+        }
+
+        // 전역변수, 지역변수
+        let b = 1; 
+        if(true){
+            let b = 2;
+            console.log('if문 안의 b값은 ' + b)
+        }
+        console.log('if문 밖의 b값은 ' + b)
+
+        // if-else 문
+        let c = 20;
+        // if(조건){참일경우실행할코드}else{거짓일경우실행할코드}
+        if(c > 15){
+            console.log('c는 15보다 크다')
+        }else{
+            console.log('c는 15보다 작다')
+        }
+
+        // if-else if 문
+        let d = 2;
+        // if(조건){실행코드}else if(조건){실행코드}else{실행코드}
+        if(d === 5){
+            console.log('5입니다.')
+        }else if(d === 10){
+            console.log('10입니다.')
+        }else{
+            console.log('5도 아니고 10도 아닙니다.')
+        }
+
+    </script>
+</head>
+<body>
+    <h1>조건문</h1>
+
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font : css3</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./dist/css/comm.css">
+</head>
+<body>
+    <h1>font</h1>
+    <h2>1. font-family</h2>
+
+    <div class="ff-1">
+        안녕하세요. 오다다입니다.
+    </div>
+    <br>
+    <div class="ff-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam officia commodi eveniet quisquam, omnis odit quas ipsam libero similique fugiat accusamus accusantium atque corporis consectetur, provident dolores! Rem, harum eaque.</div>
+    <br>
+    <div class="ff-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti, aliquam placeat nisi quam molestiae obcaecati dolores, illo accusantium consequuntur quaerat et dolorum magni minus atque voluptas quisquam sunt. Ipsam!</div>
+    <br>
+    <div class="ff-4">가나다라마바사</div>
+    
+    <style>
+        .ff-3 {
+            font-family: 'Coming Soon', cursive;
+        }
+        .ff-2 {
+            font-family: 'Comfortaa', cursive;
+            font-weight: 700;
+        }
+
+        .ff-1 {
+            font-family: "맑은 고딕", serif; color: red;
+        }
+
+        @font-face {
+            font-family: "maruburi";
+            src: url(./dist/fonts/MaruBuri-Regular.woff);
+        }
+        .ff-4 {
+            font-family: "maruburi", serif;
+        }
+    </style>
+<hr>
+    <h2>2. font-style</h2>
+
+    <address>경기도 부천시 원미구 상동</address>
+
+    <style>
+        address {
+            font-style: normal;
+        }
+    </style>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>TRANSFORM</title> 
+<style>
+  p {
+    width: 300px;height: 100px;
+    background: tomato;
+    text-align: center; line-height: 100px;
+    color: #fff;
+    transition: transform .5s;
+  }
+</style>
+</head> 
+<body>
+  <p>Original</p>
+  <!-- translate 이동 -->
+  <p class="t1">translate(30px,20px)</p>
+  <style>
+    .t1:hover {
+      transform: translate(400px, 20px);
+    }
+  </style>
+  <!-- rotate 회전 -->
+  <p class="t2">rotate(60deg)</p>
+  <style>
+    .t2:hover {
+      transform: rotate(-60deg);
+    }
+  </style>
+  <!-- scale 크기 -->
+  <p class="t3">scale(0.7, 1.3)</p>
+  <style>
+    .t3:hover {
+      transform: scale(.7, 1.3);
+      transform-origin: 0;
+    }
+  </style>
+  <p class="t4">skew(15deg, 10deg)</p>
+  <style>
+    .t4:hover {
+      transform: skew(15deg, 10deg);
+    }
+  </style>
+  <p class="t5">matrix(1, -0.1, 0, 1, 0, 0)</p>
+  <style>
+    .t5:hover {
+      transform: matrix(1, -0.1, 0, 1, 0, 0);
+    }
+  </style>
+  
+</body> 
+</html>

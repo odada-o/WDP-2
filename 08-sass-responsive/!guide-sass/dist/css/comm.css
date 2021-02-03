@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@import url(../css/reset.css);
+.sec-g .sec-cont {
+  background: #eee;
+}
+
+.sec-g .sec-tit {
+  color: purple;
+}
+
+footer {
+  height: 200px;
+  background: #008000;
+}
+
+#modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: #000;
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 200px;
+  background: #008000;
+}
+
+header h1 {
+  width: 400px;
+}
+
+header #gnb {
+  /* css에서도 보여짐 */
+  width: 600px;
+  /* width : 600px */
+  height: 100px;
+  background: #ff6347;
+}
+
+header #gnb li {
+  float: left;
+}
+
+header #gnb a {
+  display: block;
+}
+
+header #gnb a:hover {
+  color: #ff6347;
+}
+
+.sec-g.sec-sns .sec-tit {
+  font-size: 30px;
+  color: #008000;
+}
+
+.sec-g h2 {
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sec-g h2::after {
+  border-bottom: 3px solid #ff6347;
+}
+/*# sourceMappingURL=comm.css.map */

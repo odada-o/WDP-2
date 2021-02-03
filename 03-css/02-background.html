@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background : css3</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-size: 16px;color: #000;
+            text-decoration: none; line-height: 1.5;
+            box-sizing: border-box;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>background</h1>
+    <h2>1. background-color</h2>
+
+    <div class="bg-c1">background-color</div>
+    <div class="bg-c2">background-color</div>
+    <div class="bg-c3">background-color</div>
+
+    <style>
+        .bg-c1 {background-color: tomato;}
+        .bg-c2 {background-color: #f728bf;} /* HEX */
+        .bg-c3 {background-color: rgba(40, 215, 247, .5);} /* RGBA */
+        hr {
+            margin: 20px 0;
+        }
+    </style>
+
+    <hr>
+    <h2>2. background-image</h2>
+
+    <h1>
+        <a href="#">
+            <img src="./images/logo-naver.jpeg" alt="Naver">
+            <!-- 이미지 태그로 바로 넣을 수 있는 경우는 운영성 이미지 일 경우 -->
+        </a>
+    </h1>
+
+    <h1 class="logo">
+        <a href="#">네이버</a>
+    </h1>
+
+    <style>
+        .logo a {
+            display: block;
+            width: 434px; height: 130px;
+            background-image: url(./images/logo-naver.gif);
+            text-indent: -9999px;
+        }
+    </style>
+
+    <hr>
+    <h2>3. background-repeat</h2>
+
+    <div class="bg-repeat"></div>
+    <style>
+        .bg-repeat {
+            height: 500px;
+            background-color: tomato;
+            background-image: url(./images/dirty-pattern-paint-room-block_1203-5709.jpg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    </style>
+
+    <hr>
+    <h2>2. Background-Attachment</h2>
+    <div class="bg-a"></div>
+    <style>
+        .bg-a {
+            height: 200px;
+            background: url(./images/bg-a.jpg) 0 0 no-repeat;
+            background-size: 100% auto;
+            background-attachment: fixed;
+        }
+    </style>
+
+
+    <hr>
+    <h2>5. 이미지 스프라이트</h2>
+
+    <h1 class="logo2">
+        <a href="#">네이버</a>
+    </h1>
+    <style>
+        .logo2 a {
+            display: block;
+            width: 442px;height: 104px;
+            background-image: url(./images/sp_main.png);
+            background-repeat: no-repeat;
+            background-position: 0 -316px;
+            text-indent: -9999px;
+        }
+    </style>
+
+    <br><br>
+
+    <a href="#" class="link-dark">다크모드로 보기</a>
+    <style>
+        .link-dark {
+            display: block;
+            width: 260px; height: 90px;
+            background: url(./images/sp_main.png) -546px -224px no-repeat;
+            text-indent: -9999px;
+        }
+    </style>
+
+    <hr>
+    <h2>6. background-size</h2>
+
+    <div class="bg-g bg-s1"></div>
+    <div class="bg-g bg-s2"></div>
+    <div class="bg-g bg-s3"></div>
+    <div class="bg-g bg-s4"></div>
+
+    <style>
+        .bg-g {
+            height: 300px; margin-bottom: 10px;
+            background: #eee url(./images/christmas.jpg) 50% 50% no-repeat;
+        }
+        .bg-s1 {
+            background-size: 200px auto;
+        }
+        .bg-s2 {
+            background-size: 50% auto;
+        }
+        .bg-s3 {
+            /* 백그라운드 이미지의 짧은 축을 기준으로 꽉 채움 */
+            /* 버튼 같은 경우 - 이미지 잘려나가면 안돼 */
+            background-size: contain;
+        }
+        .bg-s4 {
+            /* 백그라운드 이미지의 긴 축을 기준으로 꽉 채움 */
+            /* 이미지 잘려나가도 되니까 무조건 꽉 채워줘 */
+            background-size: cover;
+        }
+    </style>
+
+
+
+    <br><br><br><br><br><br><br><br><br>
+</body>
+</html>

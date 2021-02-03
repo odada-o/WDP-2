@@ -1,0 +1,15 @@
+// 서브페이지에서 공통부분을 뺀 나머지 부분
+@import 'variables';
+@import 'mixin';
+
+footer {
+    height: 200px;
+    background: $green;
+}
+
+#modal {
+    display: none;
+    @include posXY;
+    width: 200px; height: 200px;
+    background: #000;
+}

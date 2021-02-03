@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 : html</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+        strong {
+            display: inline-block;
+            width: 100px;
+            font-weight: normal;
+        }
+        .label-et {
+            width: auto;
+        }
+        .btn {
+            display: inline-block;
+            width: 100px; height: 50px;
+            background: tomato;
+            color: #fff;
+            vertical-align: middle;
+            border: 1px solid #000;
+        }
+        .blind {
+            overflow: hidden;
+            font-size: 0; text-indent: -9999px;
+            line-height: 0;
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>form</h1>
+    
+    <form action="">
+        <fieldset>
+            <legend>회원가입</legend>
+
+            <label for="id">아이디</label>
+            <input type="text" name="id" id="id" value="eehd80"> <br><br>
+
+            <label for="pw">비밀번호</label>
+            <input type="password" name="pw" id="pw"> <br><br>
+
+            <!-- radio -->
+            <strong>남녀선택</strong>
+            <input type="radio" name="sex" id="man"> <label for="man">남자</label>
+            <input type="radio" name="sex" id="female"> <label for="female">여자</label>
+            <br><br>
+            <strong>남북선택</strong>
+            <input type="radio" name="k" id="k1"> <label for="k1">ㅇㅇ</label>
+            <input type="radio" name="k" id="k2"> <label for="k2">ㅇㅇ</label>
+            <br><br>
+
+            <!-- 생년월일 -->
+            <label for="yy">생년월일</label>
+            <input type="text" name="yy" id="yy">
+            <select name="mm" id="mm" title="월">
+                <option value="1월">1월</option>
+                <option value="2월">2월</option>
+                <option value="3월">3월</option>
+                <option value="4월">4월</option>
+                <option value="5월">5월</option>
+                <option value="6월">6월</option>
+                <option value="7월">7월</option>
+                <option value="8월">8월</option>
+                <option value="9월">9월</option>
+                <option value="10월">10월</option>
+                <option value="11월">11월</option>
+                <option value="12월">12월</option>
+            </select>
+            <input type="text" name="dd" id="dd" title="일">
+
+            <br><br>
+
+            <!-- 전화번호 -->
+            <label for="phone">전화번호</label>
+            <select name="phone" id="phone">
+                <option value="010">010</option>
+                <option value="016">016</option>
+                <option value="017">017</option>
+            </select>
+            - <input type="text" name="phone2" id="phone2" title="전화번호 가운데 4자리" maxlength="4">
+            - <input type="text" name="phone3" id="phone3" title="전화번호 끝 4자리" maxlength="4">
+            
+            <br><br>
+
+            <!-- email -->
+            <label for="email">이메일</label>
+            <input type="email" name="email" id="email" placeholder="sample@gmail.com">
+
+            <br><br>
+
+            <label for="file">첨부파일</label>
+            <input type="file" name="file" id="file">
+
+            <br><br>
+
+            <label for="write" class="blind">글쓰기</label>
+            <textarea name="write" id="write" cols="30" rows="10"></textarea>
+
+            <br><br>
+            <!-- checkbox -->
+            <input type="checkbox" name="termsService" id="termsService"> 
+            <label for="termsService" class="label-et">이용약관 동의</label>
+            <br>
+
+            <input type="checkbox" name="termsPrivacy" id="termsPrivacy"> 
+            <label for="termsPrivacy" class="label-et">개인정보 수집 동의</label>
+
+            <hr>
+            <!-- 일반 페이지 전환 링크 -->
+            <a href="#" class="btn">확인</a>
+            <!-- 정보를 서버로 보내는 역할을 하는 버튼 -->
+            <input type="submit" value="확인" class="btn">
+            <button class="btn">확인</button>
+
+            <input type="reset" value="취소" class="btn">
+
+
+
+        </fieldset>
+    </form>
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

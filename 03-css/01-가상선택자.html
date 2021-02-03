@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자 : css</title>
+
+</head>
+<body>
+    <h1>가상선택자</h1>
+    <h2>가상선택자 - 순서</h2>
+
+    <ul class="list1">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+
+    <style>
+        .list1 li {
+            margin-bottom: 5px;
+        }
+        .list1 li:first-child {
+            border: 1px solid orange;
+        }
+        .list1 li:last-child {
+            border: 1px solid red;
+            margin-bottom: 0;
+        }
+        .list1 li:nth-child(2) {
+            border: 1px solid blueviolet;
+        }
+        .list1 li:nth-child(3) {
+            border: 1px solid greenyellow;
+        }
+    </style>
+
+    <hr>
+
+    <ul class="lst2">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+    </ul>
+    <style>
+        .lst2 a::before {
+            content: "a::before";
+        }
+        .lst2 a::after {
+            content: "a::after";
+        }
+
+        .lst2 li::before {
+            content: "li::before";
+        }
+        .lst2 li::after {
+            content: "li::after";
+        }
+    </style>
+
+    <hr>
+    <ul class="lst3">
+        <li><a href="#">안녕하세요. 공지사항입니다.</a></li>
+        <li><a href="#">안녕하세요. 공지사항입니다.</a></li>
+        <li><a href="#">안녕하세요. 공지사항입니다.</a></li>
+    </ul>
+
+    <style>
+        .lst3 {
+            list-style: none;
+        }
+        .lst3 li::before {
+            content: "";
+            display: inline-block;
+            width: 5px;height: 5px;
+            margin-right: 10px;
+            margin-top: -2px;
+            background: red;
+            vertical-align: middle;
+        }
+    </style>
+
+    <hr>
+    <ul class="lst4">
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">찾아오시는 길</a></li>
+    </ul>
+
+    <style>
+        .lst4 {
+            display: flex;
+            width: 100%;
+            list-style: none;
+        }
+        .lst4 li::after {
+            content: '';
+            display: inline-block;
+            width: 3px; height: 20px;
+            margin: -2px 20px 0 20px;
+            background: red;
+            vertical-align: middle;
+        }
+        .lst4 li:last-child::after {
+            display: none;
+        }
+
+    </style>
+    
+
+    <br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

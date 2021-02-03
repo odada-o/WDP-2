@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex : css</title>
+    <style>
+        * {
+            margin: 0;padding: 0;
+            font-size: 16px; line-height: 1.5;
+            text-emphasis: none;color: #000;
+            list-style: none; box-sizing: border-box;
+        }
+        ul {
+            background: lightpink;
+            padding: 10px; margin-bottom: 10px;
+        }
+        ul li {
+            width: 100px;height: 100px;
+            margin-right: 10px; margin-bottom: 10px;
+            background: #fff;
+            text-align: center; line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex</h1>
+
+    <style>
+        .flex-1 {
+            display: flex;
+        }
+        .flex-1 li:nth-child(3) {
+            margin-left: auto;
+        }
+    </style>
+    <ul class="flex-1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <style>
+        .flex-2 {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <ul class="flex-2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <style>
+        .flex-3 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+    <ul class="flex-3">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+
+    <hr>
+    <h2>justify-content</h2>
+    <style>
+        .flex-4 {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <ul class="flex-4">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <style>
+        .flex-5 {
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+    <ul class="flex-5">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <style>
+        .flex-6 {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <ul class="flex-6">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <style>
+        .flex-7 {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+    <ul class="flex-7">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <hr>
+    <h2>align-items</h2>
+    <style>
+        .flex-8 {
+            display: flex;
+            align-items: center;
+            height: 200px;
+        }
+    </style>
+    <ul class="flex-8">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <style>
+        .flex-8s {
+            display: flex;
+            align-items: flex-end;
+            height: 200px;
+        }
+    </style>
+    <ul class="flex-8s">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <h2>align-content</h2>
+    <style>
+        .flex-9 {
+            height: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+    </style>
+    <ul class="flex-9">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <h2>완벽한 가운데 정렬</h2>
+    <style>
+        .flex-10 {
+            display: flex;
+            height: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <ul class="flex-10">
+        <li>1</li>
+    </ul>
+    
+    
+</body>
+</html>

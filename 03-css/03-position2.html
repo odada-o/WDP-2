@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position : css</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+            font-size: 16px; line-height: 1.5;
+            text-decoration: none; color: #000;
+            list-style: none; box-sizing: border-box;
+        }
+        .lst {
+            display: flex; justify-content: space-between;
+            width: 90%; margin: 0 auto;
+        }
+        .lst li {
+            position: relative;
+            width: 30%;
+        }
+        
+        .lst a {
+            display: block;
+        }
+        .lst img {
+            display: block;
+            width: 100%;
+        }
+        /* 현재 */
+        .lst .desc {
+            position: absolute;bottom: 0;left: 0;right: 0;
+            height: 100px;
+            background: rgba(0,0,0,.7);
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            transition: height .5s;
+        }
+        /* 미래 */
+        .lst li:hover .desc {
+            display: none;
+            height: 100%;
+        }
+        .desc-hover {
+            /* display: none; */
+            position: absolute;left: 0;bottom: 0;right: 0;
+            height: 100px; 
+            opacity: 0;
+            background: rgba(0,0,0,.7);
+            text-align: center;
+            transition: all .5s;
+        }
+        .lst li:hover .desc-hover {
+            /* display: block; */
+            height: 100%;
+            opacity: 1;
+        }
+        .desc-hover span {
+            position: absolute;top: 50%;left: 50%;
+            width: 70%;
+            margin-left: -35%;
+            margin-top: -24px;
+            color: #fff;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>position</h1>
+    <h2>신혼 일기</h2>
+    <ul class="lst">
+        <li>
+            <a href="#">
+                <img src="./images/thumb1.jpeg" alt="핫토픽섬네일">
+                <div class="desc">
+                    신혼 집밥 삼시세끼 챙겨먹기!!
+                </div>
+                <div class="desc-hover">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./images/thumb2.jpeg" alt="핫토픽섬네일">
+                <div class="desc">
+                    우리 가족 신혼일기 일상
+                </div>
+                <div class="desc-hover">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./images/thumb3.png" alt="핫토픽섬네일">
+                <div class="desc">
+                    소중한 아들과 함께 집들이
+                </div>
+                <div class="desc-hover">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+</body>
+</html>

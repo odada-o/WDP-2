@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxmodel : css</title>
+</head>
+<body>
+    <h1>boxmodel</h1>
+    <h2>1. 높이의 상대값</h2>
+
+    <div class="box1">
+        <div class="box2">
+            <div class="box3">높이의 상대값</div>
+        </div>
+    </div>
+
+    <style>
+        .box1 {
+            width: 100%;height: 300px;
+            background: rgba(128, 128, 128, 0.5);
+        }
+        .box2 {
+            height: 100%;
+            background: rgba(255, 99, 71, 0.5);
+        }
+        .box3 {
+            height: 100%;
+            background: rgba(0, 0, 255, 0.5);
+        }
+    </style>
+
+    <h2>2. max-width : 최대 가로 사이즈</h2>
+    <div class="max-width">max-width</div>
+
+    <style>
+        .max-width {
+            width: 100%; height: 100px;
+            max-width: 1600px;
+            background: tomato;
+        }
+    </style>
+
+    <h2>3. min-width : 최소 가로 사이즈</h2>
+    <div class="min-width"></div>
+
+    <style>
+        .min-width {
+            width: 100%; height: 100px;
+            min-width: 900px;
+            background: aqua;
+        }
+    </style>
+
+    <h2>4. max-min-width</h2>
+    <div class="max-min"></div>
+
+    <style>
+        .max-min {
+            width: 100%; height: 100px;
+            max-width: 1600px; min-width: 900px;
+            margin: auto;
+            background: purple;
+        }
+    </style>
+
+    <h2>margin</h2>
+    <div class="margin1">margin1</div>
+    <div class="margin2">margin2</div>
+
+    <style>
+        .margin1 {
+            width: 100px;height: 100px;
+            background: rgb(179, 255, 37);
+            margin: 20px 100px 50px 50px;
+        }
+        .margin2 {
+            width: 100px;height: 100px;
+            margin: 0 auto; /* block 요소를 가운데 정렬 */
+            background: rgb(37, 255, 208);
+        }
+    </style>
+
+    <h2>padding</h2>
+    <div class="padding">padding</div>
+
+    <style>
+        .padding {
+            display: inline-block; /* 가로사이즈 100% 아니야 */
+            padding: 20px 50px 100px 30px;
+            background: rgb(255, 0, 0);
+        }
+    </style>
+
+    <h2>padding box-sizing</h2>
+
+    <div class="pb-1">padding</div>
+    <div class="pb-2">padding box-sizing</div>
+
+    <style>
+        .pb-1 {
+            width: 264px;height: 64px;
+            padding: 30px 0 0 30px;
+            border: 3px solid tomato;
+            background: MediumSeaGreen;
+        }
+        .pb-2 {
+            width: 300px;height: 100px;
+            padding: 30px 0 0 30px;
+            border: 3px solid tomato;
+            background: Orange;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <br><br><br><br><br><br><br><br><br>
+</body>
+</html>

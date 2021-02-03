@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    font-size: 16px;line-height: 1.5;
+    text-decoration: none;color: #222328;
+    list-style: none; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.blind {
+    display: block;overflow: hidden;
+    font-size: 0;text-indent: -9999px;
+    line-height: 0;
+}
+
+.wrap {
+    width: 1200px;
+    margin: auto;
+}
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+header h1 a {
+    display: block;
+    height: 100px;
+    padding-top: 28px;
+}
+
+.nav-depth1 {
+    display: flex;
+}
+.nav-depth1 li {
+    position: relative;
+}
+/* depth1 링크만 선택 */
+.nav-depth1 > li > a {
+    display: block;
+    height: 100px;
+    padding: 0 20px;
+    line-height: 100px;
+}
+.nav-depth1 > li:hover > a {
+    border-bottom: 3px solid #ff6347;
+    color: #ff6347;
+}
+
+/* depth2 : 마우스 오버했을 때 */
+nav:hover .nav-depth2 {
+    opacity: 1;
+    height: 135px;
+}
+/* depth2 */
+/* depth2 : 마우스 아웃했을 때 */
+nav .nav-depth2 {
+    opacity: 0;
+    height: 0; overflow: hidden;
+    position: absolute;top: 100px;left: 0;right: 0; z-index: 10;
+    /* width: 100%; */
+    /* background: #fff; */
+    text-align: center;
+    transition: all .5s; /* display는 transition 안돼 */
+}
+.nav-depth2 a {
+    display: block;
+    padding: 5px 0;
+}
+.nav-depth2 a:hover {
+    background: #ff6347;
+    color: #fff;
+}
+nav .nav-bg {
+    position: absolute;top: 100px;left: 0;right: 0;z-index: 10;
+    height: 0;
+    background: #eee;
+    transition: all .5s;
+}
+nav:hover .nav-bg {
+    height: 150px;
+}
+
+.slide {
+    position: relative; overflow: hidden;
+    height: 300px;
+    background: orange;
+}
+.slide ul {
+    display: flex;
+    position: absolute;top: 0;left: 0;
+    animation-name: ani-slide;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes ani-slide {
+    0% {left: 0;}
+    30% {left: 0;}
+    40% {left: -1200px;}
+    70% {left: -1200px;}
+    80% {left: -2400px;}
+    100% {left: -2400px;}
+}
+
+.slide img {
+    display: block;
+}
+
+
+.container {
+    display: flex; justify-content: space-between;
+    height: 300px; padding: 20px 0;
+}
+.tab , .sec-bnr, .sec-goto {
+    width: 30%;
+}
+.tab {
+    display: flex;
+    position: relative;
+}
+.tab > section {
+    width: 50%;
+}
+.tab h2 {
+    padding: 15px 0;
+    text-align: center;
+    background: #777; color: #fff;
+}
+
+/* 공지사항 */
+.sec-bbs a {
+    display: block;
+    padding: 5px 0;
+}
+.sec-bbs .cont {
+    position: absolute;top: 60px;left: 0;right: 0;
+}
+/* 갤러리 */
+.sec-gallery .cont {
+    position: absolute;top: 60px;left: 0;right: 0;
+    display: flex; justify-content: space-between;
+}
+.sec-gallery img {
+    width: 30%;
+    height: 200px;
+    object-fit: cover;
+    object-position: -155px 0;
+}
+
+.tab .cont {
+    display: none;
+}
+.tab .on .cont {
+    display: flex;
+}
+.tab .on h2 {
+    background: orange;
+}
+
+/* 배너 */
+.sec-bnr img {
+    width: 100%;
+    cursor: pointer;
+}
+/* 바로가기 */
+.sec-goto ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 100%;
+}
+.sec-goto li {
+    width: 49%; height: 49%;
+}
+.sec-goto ul a {
+    display: block;
+    height: 100%; padding-top: 20px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    text-align: center;
+}
+.sec-goto ul img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+
+footer {
+    display: flex; justify-content: space-between;
+    height: 100px; padding-top: 35px;
+    /* background: #eee; */
+    border-top: 1px solid #ddd;
+}
+footer h1 img {
+    filter: grayscale(100%);
+}
+.copyright {
+    padding-top: 10px;
+    color: #999;
+}
+.sns {
+    padding-top: 10px;
+    font-size: 14px;
+}
+.sns a {
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+#modal {
+    display: none;
+    position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+    padding-top: 60px;
+    background: rgba(0,0,0,.8);
+    text-align: center;
+}
+#modal .inner {
+    position: relative;
+    display: inline-block;
+}
+#modal input {
+    position: absolute;top: -20px;right: -20px;
+    width: 60px;height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+

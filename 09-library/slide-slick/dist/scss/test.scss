@@ -1,0 +1,121 @@
+@charset "UTF-8";
+.slick-top{
+    img{
+        width: 100%;
+    }
+    .slick-slide{
+        position: relative;
+        .slide-txt{
+         position: absolute; top: 50%; left: 50%;
+         transform: translate(-50% , 50%);  opacity: 0;  
+         font-size: 3em; font-weight: 700;   color: #fff;
+         text-transform: uppercase; // 글씨 대문자로 바꿀때
+         text-shadow: 2px 2px 4px rgba(0,0,0, .5) ; //글자 그림자 효과 넣을때 
+         transition: all 1.5s;
+         
+        }
+        img{
+            transform: scale(1.1);
+            transition: transform .5s;
+        }
+        &.slick-active{
+            .slide-txt{
+                transition: translate(-50% , -50%); opacity: 1;
+            }
+            img{
+                transform: scale(1);
+            }
+        }
+    }
+}
+.slick-arrow {
+    z-index: 10;
+    width: 50px;height: 50px;
+    background: rgba(0,0,0,0.2);border-radius: 50%;
+    &:hover {
+        background: rgba(255,255,255, .6);
+        &::before {
+            color: #000;
+        }
+    }
+    &::before {
+        font-family: 'Line Awesome Free';font-weight: 900;font-size: 40px;
+    }
+}
+.slick-prev{
+    left: 25px;
+    &::before{
+        content: "\f104";
+    }
+}
+.slick-next{
+    right: 25px;
+    &::before{
+        content: "\f105";
+    }
+}
+//.slick-top .slick-dots li button{width : 10px}
+.slick-dots{
+    bottom: 25px;
+    li{
+        &.slick-active button{
+       background: red;
+        }
+        button{
+            width: 10px; height: 10px;
+            border: 3px solid red; border-radius: 50%;
+            // font-size: 150px; 질문 해보기
+            &:before{
+                display: none;
+            }
+        }
+    }
+}
+
+.slick-banner{
+    // overflow: hidden;
+    width: 1100px; margin:  100px auto; padding: 80px;
+    strong{
+        display: block;
+        width: 95%; height:200px ; margin: auto;
+        background: lightpink;
+        text-align: center;
+        transition: all 1.5s;
+    }
+    .slick-list{
+        padding: 80px 200px !important;
+    }
+    .slick-center{
+      strong{
+          background: tomato;
+          transform: scale(1.2);
+      }
+    }
+}
+
+.slick-wrap{
+    position: relative;
+    .slide-btn-wrap{
+        position: absolute ;top: 240px; left: 50%;
+        transform: translateX(60px);
+        .slide-btn-pause {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            padding: 4px 5px 3px;
+            width: 30px; height: 30px;
+        }
+        .slide-play{
+            &::before{
+                content: "\f04b";
+                font-family: 'Line Awesome Free';font-weight: 900;
+            }
+        }
+        .slide-pause{
+            &::before{
+                content: "\f04c";
+                font-family: 'Line Awesome Free';font-weight: 900;
+            }
+        }
+    }
+}

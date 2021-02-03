@@ -1,0 +1,561 @@
+@charset "UTF-8";
+@import url(../css/reset.css);
+
+$black : #000;
+$white : #fff;
+$skyblue : #c6f6fa;
+
+// width 1599px 이상일 경우
+.wrap {
+  padding-left: 300px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  // transition: all 2s;
+
+  .logo {
+    height: 200px;
+
+    a {
+      display: block;
+      width: 200px;
+      height: 160px;
+      margin: 30px auto 0;
+      background: url(../../images/logo.png) 50% 50% no-repeat;
+      background-size: contain;
+      text-indent: -9999px;
+    }
+  }
+
+  #gnb {
+    margin-top: 100px;
+    a {
+      display: block;
+      padding: 15px 0 14px 60px;
+      font-size: 1.714em;
+      color: #000;
+      &:hover {
+        color:#104E96;
+      }
+      &::before {
+        content: "\f152";
+        margin-right: 5px;
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+      }
+    }
+    li {
+      &:first-child a::before {content: "\f594";}
+      &:nth-child(2) a::before {content: "\f1bb";}
+      &:nth-child(3) a::before {content: "\f200";}
+      &:last-child a::before {content: "\f57b";}
+    }
+  }
+
+  .nav-goto {
+    margin: auto 0 50px;
+
+    ul {
+      display: flex;
+      justify-content: center;
+
+      &.link-goto {
+        li:first-child a::before {
+          display: none;
+        }
+
+        a {
+          display: block;
+          padding: 4px 5px;
+          font-size: 1.3em;
+          text-transform: uppercase;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 19px;
+            margin: -4px 13px 0 5px;
+            vertical-align: middle;
+            background: #999;
+          }
+        }
+      }
+
+      &.link-sns {
+        a {
+          font-size: 3em;
+        }
+      }
+    }
+  }
+}
+
+.nav-util {
+  height: 50px;
+  background: $black;
+  color: $white;
+}
+
+.container {
+  // height: 100vh - 50px
+  height: calc(100vh - 50px);
+  background: #eee;
+}
+
+// pc버전 변수
+$w : 20%;
+$h : 25%;
+
+article {
+  overflow: hidden;
+  float: left;
+  position: relative;
+  width: 20%;
+  height: 25%;
+  transition: width .5s;
+
+  &:hover::before {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($black, .1);
+  }
+
+  a {
+    display: block;
+    height: 100%;padding: 50px;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    font-size: 1.571em;
+    transform: translateY(60px);
+    opacity: 0;
+    animation: ani-txt 1s forwards;
+  }
+
+  p {
+    font-size: 1em;
+    transform: translateY(60px);
+    opacity: 0;
+    animation: ani-txt 1s forwards;
+  }
+
+  @keyframes ani-txt {
+    0% {
+      transform: translateY(60px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .la-sync {
+    position: absolute;
+    bottom: -2vw;
+    right: -4vw;
+    color: $white;
+    font-size: 15vw;
+    animation-name: ani-sync;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes ani-sync {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &:first-child {
+    // w : 20% * 3, h : 25% * 2
+    width: $w * 3;
+    height: $h * 2;
+    background: url(../../images/photo-1.jpg) 50% 50% no-repeat;
+    background-size: cover;
+
+    strong {
+      position: absolute;
+      bottom: -2.6vw;
+      right: -0.7vw;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: $white;
+      font-size: 110px;
+      // vw란 chrome(viewport)을 기준으로 같이 변경됨.
+    }
+  }
+
+  &:nth-child(2) {
+    width: $w * 2;
+    height: $h;
+    background: $white;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &:nth-child(3) {
+    background: $skyblue;
+
+    &::before {
+      display: none;
+    }
+
+    h2 {
+      animation-delay: .5s;
+    }
+  }
+
+  &:nth-child(4) {
+    background: url(../../images/photo-2.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(5) {
+    background: url(../../images/photo-3.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(6) {
+    width: $w * 2;
+    height: $h;
+    background: $white;
+
+    &::before {
+      display: none;
+    }
+
+    h2 {
+      animation-delay: 1s;
+    }
+
+    p {
+      animation-delay: 1s;
+    }
+  }
+
+  &:nth-child(7) {
+    background: url(../../images/photo-4.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(8) {
+    background: $white;
+
+    &::before {
+      display: none;
+    }
+
+    h2 {
+      animation-delay: 1.5s;
+    }
+
+    p {
+      animation-delay: 1.5s;
+    }
+  }
+
+  &:nth-child(9) {
+    width: $w * 2;
+    height: $h;
+    background: url(../../images/photo-5.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(10) {
+    background: url(../../images/photo-6.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(11) {
+    background: rgba($skyblue, .4);
+
+    &::before {
+      display: none;
+    }
+
+    h2 {
+      animation-delay: 2s;
+    }
+
+    p {
+      animation-delay: 2s;
+    }
+  }
+
+  &:last-child {
+    background: url(../../images/photo-7.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+}
+
+// 1280px < width < 1599px 일 경우
+// h : 100vh, transition
+@media screen and (max-width: 1599px) {
+  .wrap { 
+    padding-left: 0;
+  }
+
+  header {
+    flex-direction: row; justify-content: space-between;
+    position: relative;
+    width: 100%;height: 100px;
+    .logo {
+      height: auto;
+      a {
+        width: 150px;
+        height: 100%;
+        margin: 0;
+        background-size: 70% auto;
+      }
+    }
+    #gnb {
+      margin-top: 0;
+      ul {
+        display: flex;
+      }
+      a {
+        height: 100px; padding: 0 30px;
+        line-height: 100px;
+      }
+    }
+    .nav-goto {
+      display: none;
+    }
+  }
+
+  .container {
+    height: calc(100vh - 150px);
+  }
+}
+
+// 1023px < width < 1280px 일 경우
+@media screen and (max-width: 1280px) {
+  .container {
+    // overflow: hidden;
+    height: auto;
+    // 기존 1599이하일 경우에 설정되었던 높이 값을 취소하고 defult로 설정
+  }
+
+  // 변수 재선언
+  $w : 25%;
+  $h : 280px;
+
+  article {
+    width: $w;
+    height: $h;
+
+    &:first-child {
+      width: $w * 3;
+      height: $h * 2;
+    }
+
+    &:nth-child(2) {
+      width: $w;
+      height: $h;
+    }
+
+    &:nth-child(6) {
+      width: $w * 2;
+      height: $h;
+    }
+
+    &:nth-child(7) {
+      width: $w * 2;
+      height: $h;
+    }
+
+    &:nth-child(9) {
+      width: $w;
+      height: $h;
+    }
+
+    &:nth-child(10) {
+      width: $w * 2;
+      height: $h;
+    }
+  }
+
+}
+
+// 779px < width < 1023px 일 경우
+@media screen and (max-width: 1023px) {
+  // 변수 재선언
+  $w : 33.333%;
+
+  article {
+    width: $w;
+
+    &:first-child {
+      width: $w * 3;
+      height: 400px;
+    }
+
+    &:nth-child(2) {
+      width: $w * 2;
+    }
+
+    &:nth-child(6) {
+      width: $w * 2;
+    }
+    &:nth-child(9) {
+      width: $w;
+    }
+    &:nth-child(4),
+    &:nth-child(7),
+    &:nth-child(10),
+    &:nth-child(12) {
+      display: none;
+    }
+  }
+}
+
+// 639px < width < 779px 일 경우
+@media screen and (max-width: 779px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    .logo {
+      margin: 15px 0;
+      a {
+        width: 100px; height: 70px;margin: 0 auto;
+        background-size: contain;
+      }
+    }
+    #gnb {
+      border-top: 1px solid #eee;
+      ul {
+        justify-content: space-between;
+      }
+      a {
+        height: 60px;
+        line-height: 60px; font-size: 1.2em;
+      }
+    }
+  }
+  .nav-util {
+    display: none;
+  }
+
+  // 변수 재선언
+  $w : 50%;
+
+  article {
+    width: $w;
+
+    &:nth-child(2) {
+      width: $w * 2;
+    }
+
+    &:nth-child(n+3) {
+      width: $w;
+    }
+  }
+}
+
+// 479px < width < 639px 일 경우
+@media screen and (max-width: 639px) {
+  header {
+    #gnb {
+      ul {padding: 0 2%;}
+      a {padding: 0;}
+    }
+  }
+
+  // 변수 재선언
+  $h : 200px;
+
+  article {
+    &:nth-child(n+2) {
+      height: $h;
+    }
+    a {
+      display: flex; align-items: center;
+      padding: 0 0 0 30px;
+    }
+    h2 {
+      font-size: 1.7em; font-weight: 300;
+    }
+    p {
+      display: none;
+    }
+  }
+}
+
+// width 479px 이하일 경우
+@media screen and (max-width: 479px) {
+  header {
+    position: fixed;top: 0;left: 0; z-index: 10;
+    justify-content: center;
+    .logo {
+      margin: 0 0 50px;
+      a {
+        width: 120px;height: 90px;
+        background-image: url(../../images/logo-w.png);
+      }
+    }
+    #gnb {
+      width: 60%; margin: 0 auto;
+      border: none;
+      ul {
+        flex-direction: column;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        padding-left: 20px;
+        background: rgba(0,0,0,0.7);
+        border-radius: 15px;
+        color: #fff;
+      }
+    }
+  }
+  article {
+    &::before {
+      background: rgba(0,0,0,.4);
+    }
+    &::after {
+      display: none;
+      content: '';
+      position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+      background: url(../../images/bg_event.jpg) 0 0 no-repeat;
+      opacity: .9;
+    }
+    &:first-child {
+      position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+      height: 100vh;
+      background-position: -310px 0;
+      strong {
+        display: none;
+      }
+    }
+    &:nth-child(n+2) { //두번째 article 이후로 모두
+      display: none;
+    }
+  }
+}

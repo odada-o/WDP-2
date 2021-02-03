@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록 : html</title>
+</head>
+<body>
+
+    <h1>block & inline</h1>
+    <h2>1. block</h2>
+    <p>- 블록요소는 가로, 세로 값을 가지고 밑으로 떨어진다.</p>
+
+    <div class="block">블록태그</div><div class="block">블록태그</div><div class="block">블록태그</div>
+    <p>블록태그</p><p>블록태그</p><p>블록태그</p>
+
+    <style>
+        .block {
+            width: 100px; height: 50px;
+            background: rgb(187, 187, 255);
+        }
+    </style>
+
+
+    <hr>
+    <h2>2. inline</h2>
+    <p>- 인라인 요소는 가로, 세로 값을 갖지 못하고, 
+        옆으로 나열되며 그냥 텍스트라고 생각하면 됩니다.</p>
+
+    가나다라마바사
+
+    <span>가</span><span>나</span><span>다</span>
+
+    <a href="#" class="inline">가</a><a href="#" class="inline">나</a><a href="#" class="inline">다</a>
+
+    <style>
+        .inline {
+            width: 100px; height: 50px;
+            background: tomato;
+        }
+    </style>
+
+    <h2>3. inline-block</h2>
+    <p>- 블록요소와 같이 가로, 세로 값을 가지고
+                인라인요소와 같이 가로로 나열할 수 있다.</p>
+
+    <a href="#" class="inline-block">가</a> <a href="#" class="inline-block">나</a> <a href="#" class="inline-block">다</a>
+    
+    <style>
+        .inline-block {
+            display: inline-block;
+            width: 100px; height: 50px;
+            background: aqua;
+        }
+    </style>
+
+
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+
+    
+</body>
+</html>

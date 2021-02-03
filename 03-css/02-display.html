@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display : css3</title>
+    <style>
+        * {
+            margin: 0; padding: 0;
+            font-size: 16px;
+            list-style: none;
+            color: #000; line-height: 1.5;
+             text-decoration: none;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>display</h1>
+
+    <!-- ul>li*4>a[href=#]{menu$} -->
+    <ul>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+    </ul>
+
+    <style>
+        ul li {
+            display: inline-block;
+            width: 100px;height: 50px;
+            background: tomato;
+        }
+        ul a {
+            /* 가로값 기본 100%, 가로, 세로값 지정 가능 */
+            display: block;
+            width: 100%; height: 100%;
+            background: blue;
+            text-align: center; line-height: 50px;
+            color: #fff;
+        }
+    </style>
+
+    <hr>
+
+    <div class="pop">팝업</div>
+
+    <style>
+        .pop {
+            display: none; /* 오브젝트가 보이지 않게 처리 */
+            padding: 200px;
+            background: lightgray;
+            border: 1px solid #000;
+        }
+    </style>
+    
+</body>
+</html>

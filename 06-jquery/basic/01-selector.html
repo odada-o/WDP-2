@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 : jquery</title>
+    <script src="./dist/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h1>선택자</h1>
+
+    <h2>1. css 방식으로 선택</h2>
+    <script>
+        // 준비이벤트 (html을 모두 로드했을 때)
+        $(function(){
+            // nav 태그에 border 값 넣어줘
+            $('nav').css({
+                border : '1px solid red',
+                background : 'yellow'
+            })
+            $('.nav-depth1').css({
+                display : 'flex'
+            })
+            $('.nav-depth1 li').css({
+                padding : '0 10px'
+            })
+            $('.nav-depth1 li:nth-child(2)').css({
+                background : 'orange'
+            })
+            $('.nav-depth1 li:odd').css({
+                background : 'pink'
+            })
+        })
+    </script>
+    <nav>
+        <ul class="nav-depth1">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+        </ul>
+    </nav>
+
+    <hr>
+    <h2>조상, 부모 선택</h2>
+
+    <div id="wrap">
+        조상
+        <ul>
+            조부모(조상)
+            <li>
+                부모 (조상)
+                <span>나(this)</span>
+            </li>
+            <li>
+                부모
+                <a href="#">나(this)</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            // 부모 선택
+            $('#wrap span').parent().css({
+                background : 'tomato'
+            })
+            // 조상 선택
+            $('#wrap a').parents().css({
+                border : '1px solid blue'
+            })
+            // 조상 중 ul만 선택
+            $('#wrap a').parents('ul').css({
+                background : 'gray'
+            })
+            // span 과 #wrap 사이의 모든 상위 요소 선택
+            $('#wrap span').parentsUntil('#wrap').css({
+                outline : '3px solid aqua'
+            })
+        })
+    </script>
+    <hr>
+    <h2>자식선택</h2>
+    <div id="children">
+        나(this)
+        <ul>
+            자식
+            <li>
+                자손
+                <span>자손</span>
+            </li>
+            <li>
+                자손
+                <a href="#">자손</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            // 직계 자식 선택 (children())
+            $('#children').children().css({
+                border : '1px solid aqua'
+            })
+            // 모든 자손(find())
+            $('#children').find('span').css({
+                background : 'tomato'
+            })
+        })
+    </script>
+
+    <hr>
+    <h2>필터링(선택된 요소 중...)</h2>
+    <ul class="list">
+        <li>menu1</li>
+        <li class="on">menu2</li> <!-- indigo -->
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+    <script>
+        $(function(){
+            // 첫번째 요소 선택
+            $('.list li').first().css({
+                background : 'tomato'
+            })
+            // 마지막 요소 선택
+            $('.list li').last().css({
+                background : 'aqua'
+            })
+            // 인텍스 번째 요소 선택
+            $('.list li').eq(2).css({
+                background : 'lightgreen'
+            })
+            // 선택된 요소 중 특정 성질의 요소 선택
+            $('.list li').filter('.on').css({
+                background : 'indigo',
+                color : '#fff'
+            })
+            // 해당 요소를 제외한 나머지 요소 선택
+            $('.list li').not('.on').css({
+                border : '1px solid #000'
+            })
+        })
+    </script>
+
+
+
+    <br><br><br><br><br><br><br><br><br>
+</body>
+</html>

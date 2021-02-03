@@ -1,0 +1,165 @@
+.slick-top img {
+  height: 500px;
+}
+
+.slick-top .slick-slide {
+  position: relative;
+}
+
+.slick-top .slick-slide .slide-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  opacity: 0;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  font-size: 5em;
+  font-weight: 700;
+  color: red;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slick-top .slick-slide img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.slick-top .slick-slide.slick-active .slide-txt {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.slick-top .slick-slide.slick-active img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.slick-top .slick-arrow {
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.slick-top .slick-arrow:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.slick-top .slick-arrow:hover::before {
+  color: #000;
+}
+
+.slick-top .slick-arrow::before {
+  font-family: 'Line Awesome Free';
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.slick-top .slick-prev {
+  left: 25px;
+}
+
+.slick-top .slick-prev::before {
+  content: "\f104";
+}
+
+.slick-top .slick-next {
+  right: 25px;
+}
+
+.slick-top .slick-next::before {
+  content: "\f105";
+}
+
+.slick-top .slick-dots {
+  bottom: 25px;
+}
+
+.slick-top .slick-dots li.slick-active button {
+  background: red;
+}
+
+.slick-top .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  border: 3px solid red;
+  border-radius: 50%;
+}
+
+.slick-top .slick-dots li button:before {
+  display: none;
+}
+
+.slick-banner {
+  width: 1000px;
+  margin: 100px auto;
+}
+
+.slick-banner strong {
+  display: block;
+  width: 95%;
+  height: 200px;
+  margin: auto;
+  background: lightpink;
+  text-align: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.slick-banner .slick-list {
+  padding: 80px 0 !important;
+}
+
+.slick-banner .slick-center strong {
+  background: tomato;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media screen and (max-width: 1000px) {
+  .slick-banner {
+    width: 100%;
+  }
+}
+
+.slick-wrap {
+  position: relative;
+}
+
+.slick-wrap .slide-btn-wrap {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
+}
+
+.slick-wrap .slide-btn-wrap .slide-btn-pause {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.slick-wrap .slide-btn-wrap .slide-play::before {
+  content: "\f04b";
+  font-family: 'Line Awesome Free';
+  font-weight: 900;
+}
+
+.slick-wrap .slide-btn-wrap .slide-pause::before {
+  content: "\f04c";
+  font-family: 'Line Awesome Free';
+  font-weight: 900;
+}
+/*# sourceMappingURL=comm.css.map */
