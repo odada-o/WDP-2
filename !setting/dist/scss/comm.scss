@@ -51,7 +51,7 @@
     }
     &.swiper-slide-active {
       .txt-ani {
-        transform: translate(-600px, -50%);
+        transform: translate(-600px, -50%); opacity: 1;
       }
     }
   }
@@ -61,10 +61,20 @@
   .slide4 {background-image: url(../../images/mainslide-4.jpg);}
   .txt-ani {
     position: absolute;top: 50%;left: 50%;
-    transform: translate(-600px, -70%);
+    transform: translate(-600px, -70%); opacity: 0;
     transition: all 1s;
     font-weight: 500;font-size: 2.7em;
     color: $w; text-align: left; letter-spacing: -.05em;
+    text-shadow: 0 0 10px rgba($b, .3);
+  }
+  .swiper-pagination {
+    bottom: 20px;
+  }
+  .swiper-button-next:after, .swiper-button-prev:after {
+    color: $w; opacity: .5;
+  }
+  .swiper-pagination-bullet-active {
+    background: $w;
   }
 }
 
