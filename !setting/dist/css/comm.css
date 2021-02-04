@@ -1,6 +1,36 @@
 @import url(../css/reset.css);
-.navbar-brand {
+.container {
+  max-width: 1476px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 20px 150px;
+  -webkit-transition: padding 1s;
+  transition: padding 1s;
+}
+
+header .navbar-brand {
   display: block;
+  font-size: 30px;
+}
+
+header.bg-light {
+  padding: 5px 150px 10px;
+}
+
+#collapsibleNavbar .nav-link {
+  padding: .5rem 2rem;
+  color: #fff;
+}
+
+.bg-light #collapsibleNavbar .nav-link {
+  padding: .5rem 2rem;
+  color: #000;
 }
 
 .swiper-container {

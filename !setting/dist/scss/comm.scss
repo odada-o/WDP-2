@@ -5,9 +5,40 @@
 @import 'variables';
 @import 'mixin';
 
+// layout
+.container {
+  //min-width: 1200px; // width : 최소 1200px
+  max-width: 1476px; // width : 최대 1476px
+}
+
 // header
-.navbar-brand {
-  display: block;
+header {
+  position: fixed;top: 0;left: 0;right: 0;z-index: 10;
+  padding: 20px 150px;
+  transition: padding 1s;
+  .navbar-brand {
+    display: block;
+    font-size: 30px;
+  }
+  &.bg-light {
+    padding: 5px 150px 10px;
+  }
+}
+
+#collapsibleNavbar {
+  .nav-link {
+    padding: .5rem 2rem;
+    color: $w;
+  }
+}
+// 스크롤 시
+.bg-light {
+  #collapsibleNavbar {
+    .nav-link {
+      padding: .5rem 2rem;
+      color: $b;
+    }
+  }
 }
 
 // swiper 공통
