@@ -5,6 +5,7 @@
 }
 
 .sec-tit {
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -145,6 +146,10 @@ header.bg-light {
 
 .slide-top .swiper-pagination-bullet-active {
   background: #fff;
+}
+
+.sec-name2 {
+  background: #eee;
 }
 
 #scrollUp {
