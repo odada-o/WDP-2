@@ -5,7 +5,7 @@
 }
 
 .sec-tit {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   text-align: center;
 }
 
@@ -148,8 +148,64 @@ header.bg-light {
   background: #fff;
 }
 
+.sec-g {
+  overflow: hidden;
+}
+
 .sec-name2 {
   background: #eee;
+}
+
+.slide-banner1 {
+  overflow: visible;
+  height: 400px;
+}
+
+.slide-banner1 .swiper-button-prev {
+  left: -80px;
+}
+
+.slide-banner1 .swiper-button-next {
+  right: -80px;
+}
+
+.slide-banner2 {
+  height: 400px;
+  margin-top: 50px;
+}
+
+.swiper-wrap {
+  position: relative;
+}
+
+.swiper-wrap .swiper-button-next-out, .swiper-wrap .swiper-button-prev-out {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.swiper-wrap .swiper-button-next-out::before, .swiper-wrap .swiper-button-prev-out::before {
+  font-family: 'Line Awesome Free';
+  font-weight: 900;
+  font-size: 4em;
+  opacity: .5;
+}
+
+.swiper-wrap .swiper-button-next-out {
+  right: -100px;
+}
+
+.swiper-wrap .swiper-button-next-out::before {
+  content: "\f105";
+}
+
+.swiper-wrap .swiper-button-prev-out {
+  left: -100px;
+}
+
+.swiper-wrap .swiper-button-prev-out::before {
+  content: "\f104";
 }
 
 #scrollUp {

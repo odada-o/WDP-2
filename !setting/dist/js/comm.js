@@ -30,6 +30,29 @@ $(function(){
     },
   });
 
+  // slide-banner
+  // var swiper = new Swiper('.slide-banner1, .slide-banner2', {
+  var swiper = new Swiper('.slide-banner1', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  var swiper = new Swiper('.slide-banner2', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.swiper-button-next-out',
+      prevEl: '.swiper-button-prev-out',
+    },
+  });
+
   // scrollUp
   $.scrollUp({
       scrollName: 'scrollUp', // Element ID

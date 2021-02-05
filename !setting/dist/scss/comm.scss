@@ -14,7 +14,7 @@
 
 // common
 .sec-tit {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   text-align: center;
   span {
     display: inline-block;position: relative;
@@ -125,9 +125,44 @@ header {
 }
 
 // contents
+.sec-g {
+  overflow: hidden;
+}
 .sec-name2 {
   background: #eee;
 }
+
+.slide-banner1 {
+  overflow: visible;
+  height: 400px;
+  .swiper-button-prev {left: -80px;}
+  .swiper-button-next {right: -80px;}
+}
+.slide-banner2 {
+  height: 400px; margin-top: 50px;
+}
+.swiper-wrap {
+  position: relative;
+  .swiper-button-next-out, .swiper-button-prev-out {
+    @include posY;
+    &::before {
+      font-family: 'Line Awesome Free'; font-weight: 900; font-size: 4em; opacity: .5;
+    }
+  }
+  .swiper-button-next-out {
+    right: -100px;
+    &::before {
+      content: "\f105";
+    }
+  }
+  .swiper-button-prev-out {
+    left: -100px;
+    &::before {
+      content: "\f104";
+    }
+  }
+}
+
 
 
 // scrollUp
