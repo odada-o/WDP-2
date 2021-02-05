@@ -1,13 +1,13 @@
 $(function(){
   // header sticky
-  $(window).scroll(function(){
+  let $window = $(window)
+  $window.scroll(function(){
     if($(this).scrollTop() > 50){
       $('header').addClass('bg-light navbar-light').removeClass('navbar-dark')
     }else{
       $('header').removeClass('bg-light navbar-light').addClass('navbar-dark')
     }
-  })
-  $(window).trigger('scroll')
+  }).trigger('scroll')
 
 
   // slide-top

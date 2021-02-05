@@ -1,6 +1,26 @@
 @import url(../css/reset.css);
 .container {
   max-width: 1476px;
+  padding: 100px 0;
+}
+
+.sec-tit {
+  text-align: center;
+}
+
+.sec-tit span {
+  display: inline-block;
+  position: relative;
+}
+
+.sec-tit span::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 2px;
+  right: 2px;
+  height: 1px;
+  background: #000;
 }
 
 header {

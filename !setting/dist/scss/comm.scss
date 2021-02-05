@@ -9,6 +9,20 @@
 .container {
   //min-width: 1200px; // width : 최소 1200px
   max-width: 1476px; // width : 최대 1476px
+  padding: 100px 0;
+}
+
+// common
+.sec-tit {
+  text-align: center;
+  span {
+    display: inline-block;position: relative;
+    &::after {
+      content: '';
+      position: absolute;bottom: -10px;left: 2px;right: 2px;
+      height: 1px; background: $b;
+    }
+  }
 }
 
 // header
