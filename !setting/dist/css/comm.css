@@ -426,6 +426,34 @@ header.bg-light {
   content: "\f104";
 }
 
+.sec-bnr {
+  position: relative;
+  height: 300px;
+  background: url(../../images/map.jpg) 0 0 no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.sec-bnr p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2em;
+  text-shadow: 0 0 5px #000;
+}
+
+.thankyou_message {
+  display: none;
+}
+
+footer {
+  height: 300px;
+  background: #ccc;
+}
+
 #scrollUp {
   bottom: 20px;
   right: 20px;

@@ -162,7 +162,24 @@ header {
   }
 }
 
+.sec-bnr {
+  position: relative;
+  height: 300px;
+  background: url(../../images/map.jpg) 0 0 no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  p {
+    @include posXY;
+    color: $w; font-size: 2em; text-shadow: 0 0 5px $b;
+  }
+}
+.thankyou_message {
+  display: none;
+}
 
+footer {
+  height: 300px; background: #ccc;
+}
 
 // scrollUp
 #scrollUp {

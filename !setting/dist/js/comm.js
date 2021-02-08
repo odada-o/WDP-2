@@ -9,6 +9,21 @@ $(function(){
     }
   }).trigger('scroll')
 
+  // 메뉴 클릭시 해당 해쉬태그로 애니메이션 되면서 이동
+  $('.navbar-nav a').click(function(event){
+    // a링크 기능 없애기
+    event.preventDefault()
+
+    // 만약 링크에 해쉬태그가 비어있지 않다면...
+    if(this.hash != ""){
+
+      let hash = this.hash
+
+      $('html, body').animate({
+        scrollTop : $(hash).offset().top
+      }, 800)
+    }
+  })
 
   // slide-top
   var swiper = new Swiper('.slide-top', {
@@ -64,6 +79,8 @@ $(function(){
       scrollText: '페이지 위로 이동', // Text for element
       activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
     });
+
+
 
 
 

@@ -48,13 +48,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">menu1</a>
+              <a class="nav-link" href="#section1">menu1</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">menu2</a>
+              <a class="nav-link" href="#section2">menu2</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">menu3</a>
+              <a class="nav-link" href="#section3">menu3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu4.html">menu4</a>
             </li>
           </ul>
         </div>
@@ -99,8 +102,7 @@
     <!-- //slide -->
     <!-- main -->
     <div id="main">
-
-      <section class="sec-g sec-name1">
+      <section id="section1" class="sec-g sec-name1">
         <div class="container">
           <h2 class="sec-tit">
             <span>타이틀1</span>
@@ -129,7 +131,7 @@
         </div>
       </section>
 
-      <section class="sec-g sec-name2">
+      <section id="section2" class="sec-g sec-name2">
         <div class="container">
           <h2 class="sec-tit"><span>타이틀2</span></h2>
           <div class="sec-cont">
@@ -180,30 +182,30 @@
         <p>배너 글씨</p>
       </section>
 
-      <section class="sec-g sec-name3">
+      <section id="section3" class="sec-g sec-name3">
         <div class="container">
           <h2 class="sec-tit"><span>CONTACTS</span></h2>
           <div class="sec-cont">
-            <form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbxwfV1E9-y9rcKVAeElv6-wyk_7cDH5n9QIlDVZWoOwJ1CKWRZXQIJw5w/exec">
+            <form class="gform" name="contact" method="post" action="https://script.google.com/macros/s/AKfycbxwfV1E9-y9rcKVAeElv6-wyk_7cDH5n9QIlDVZWoOwJ1CKWRZXQIJw5w/exec">
               <div class="row">
                 <div class="col-md-1">
                   <label for="usr">이름</label>
                 </div>
                 <div class="col-md-4">
-                  <input type="text" class="form-control" id="usr" placeholder="홍길동">
+                  <input type="text" name="usr" class="form-control" id="usr" value="홍길동">
                 </div>
                 <div class="col-md-1 offset-md-1">
                   <label for="email">이메일</label>
                 </div>
                 <div class="col-md-5">
-                  <input type="email" class="form-control" id="email" placeholder="id@gmail.com">
+                  <input type="email" name="email" class="form-control" id="email" value="id@gmail.com">
                 </div>
                 <!-- 문의내용 -->
                 <div class="col-md-1 mt-3">
                   <label for="comment">문의내용</label>
                 </div>
                 <div class="col-md-11 mt-3">
-                  <textarea class="form-control" rows="5" id="comment" placeholder="문의하실 내용을 적어주세요."></textarea>
+                  <textarea class="form-control" name="commet" rows="5" id="comment" placeholder="문의하실 내용을 적어주세요.">가라가라 메일아 가라~~~~</textarea>
                 </div>
               </div>
               <div class="row mt-4">
@@ -214,6 +216,14 @@
                   <button type="reset" class="btn btn-secondary">취소</button>
                 </div>
               </div>
+
+              <div class="thankyou_message alert alert-success alert-dismissible fade show mt-4">
+                <div class="inner">
+                  <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+                  <strong>Success!</strong> 문의 주셔서 감사합니다.
+                </div>
+              </div>
+
             </form>
           </div>
         </div>
@@ -222,7 +232,11 @@
     </div>
     <!-- //main -->
     <!-- footer -->
-    <footer></footer>
+    <footer>
+      <div class="container">
+        footer
+      </div>
+    </footer>
     <!-- //footer -->
   </div>
 
