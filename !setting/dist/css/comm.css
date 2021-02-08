@@ -238,6 +238,10 @@ input[type=password] {
   background: #000;
 }
 
+.btn {
+  width: 100%;
+}
+
 header {
   position: fixed;
   top: 0;

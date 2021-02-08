@@ -176,23 +176,42 @@
         </div>
       </section>
 
+      <section class="sec-g sec-bnr">
+        <p>배너 글씨</p>
+      </section>
+
       <section class="sec-g sec-name3">
         <div class="container">
           <h2 class="sec-tit"><span>CONTACTS</span></h2>
           <div class="sec-cont">
-            <form action="" method="get">
+            <form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbxwfV1E9-y9rcKVAeElv6-wyk_7cDH5n9QIlDVZWoOwJ1CKWRZXQIJw5w/exec">
               <div class="row">
                 <div class="col-md-1">
                   <label for="usr">이름</label>
                 </div>
                 <div class="col-md-4">
-                  <input type="text" class="form-control" id="usr">
+                  <input type="text" class="form-control" id="usr" placeholder="홍길동">
                 </div>
-                <div class="col-md-1 offset-md-2">
+                <div class="col-md-1 offset-md-1">
                   <label for="email">이메일</label>
                 </div>
-                <div class="col-md-4">
-                  <input type="email" class="form-control" id="email">
+                <div class="col-md-5">
+                  <input type="email" class="form-control" id="email" placeholder="id@gmail.com">
+                </div>
+                <!-- 문의내용 -->
+                <div class="col-md-1 mt-3">
+                  <label for="comment">문의내용</label>
+                </div>
+                <div class="col-md-11 mt-3">
+                  <textarea class="form-control" rows="5" id="comment" placeholder="문의하실 내용을 적어주세요."></textarea>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-2 offset-md-4">
+                  <button type="submit" class="btn btn-danger">보내기</button>
+                </div>
+                <div class="col-md-2">
+                  <button type="reset" class="btn btn-secondary">취소</button>
                 </div>
               </div>
             </form>
@@ -211,6 +230,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./dist/vendor/scrollUp/jquery.scrollUp.min.js"></script>
+  <script src="./dist/js/form-submission-handler.js"></script>
   <script src="./dist/js/comm.js"></script>
   <!-- ie9 이하 버전에서 잘 보이도록 추가 -->
   <!--[if lt IE 9]>
