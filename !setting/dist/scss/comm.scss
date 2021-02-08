@@ -24,6 +24,19 @@
 .btn {
   width: 100%;
 }
+.ani-slide {
+  visibility: hidden;
+  &.ani-top {
+    visibility: visible;
+    animation: object-slide 1s;
+  }
+}
+@keyframes object-slide {
+  0% {opacity: 0;transform: translateY(60px);}
+  100% {opacity: 1;transform: translateY(0);}
+}
+
+
 
 // header
 header {
@@ -36,6 +49,13 @@ header {
   }
   &.bg-light {
     padding: 5px 150px 10px;
+  }
+}
+.bg-light #collapsibleNavbar {
+  .nav-link{
+    &.active {
+      color: #ff6347; font-weight: bold;
+    }
   }
 }
 

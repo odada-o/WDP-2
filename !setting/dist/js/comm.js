@@ -20,7 +20,7 @@ $(function(){
       let hash = this.hash
 
       $('html, body').animate({
-        scrollTop : $(hash).offset().top
+        scrollTop : $(hash).offset().top - 77 // gnb의 높이값을 빼주삼
       }, 800)
     }
   })
@@ -80,8 +80,17 @@ $(function(){
       activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
     });
 
+    // 스크롤시 오브젝트 애니메이션
+    $(window).scroll(function(){
+      $('.ani-slide').each(function(){
 
+        let pos = $(this).offset().top,
+            winscroll = $(window).scrollTop()
 
-
+        if(winscroll + 600 > pos){
+          $(this).addClass('ani-top')
+        }
+      })
+    })
 
 })

@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="./dist/css/comm.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
   <div id="u-skip">
     <a href="#gnb">주메뉴 바로가기</a>
     <a href="#main">본문 바로가기</a>
@@ -104,12 +104,12 @@
     <div id="main">
       <section id="section1" class="sec-g sec-name1">
         <div class="container">
-          <h2 class="sec-tit">
+          <h2 class="sec-tit ani-slide">
             <span>타이틀1</span>
           </h2>
           <div class="sec-cont">
             <!-- Nav tabs -->
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs ani-slide">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
               </li>
@@ -122,7 +122,7 @@
             </ul>
 
             <!-- Tab panes -->
-            <div class="tab-content">
+            <div class="tab-content ani-slide">
               <div class="tab-pane container active" id="home">home</div>
               <div class="tab-pane container fade" id="menu1">menu1</div>
               <div class="tab-pane container fade" id="menu2">menu2</div>
@@ -133,10 +133,10 @@
 
       <section id="section2" class="sec-g sec-name2">
         <div class="container">
-          <h2 class="sec-tit"><span>타이틀2</span></h2>
+          <h2 class="sec-tit ani-slide"><span>타이틀2</span></h2>
           <div class="sec-cont">
             <!-- slide-banner1 -->
-            <div class="swiper-container slide-banner1">
+            <div class="swiper-container slide-banner1 ani-slide">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">Slide 1</div>
                 <div class="swiper-slide">Slide 2</div>
@@ -155,7 +155,7 @@
             </div>
 
             <!-- slide-banner2 -->
-            <div class="swiper-wrap">
+            <div class="swiper-wrap ani-slide">
               <div class="swiper-container slide-banner2">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">Slide 1</div>
@@ -184,10 +184,10 @@
 
       <section id="section3" class="sec-g sec-name3">
         <div class="container">
-          <h2 class="sec-tit"><span>CONTACTS</span></h2>
+          <h2 class="sec-tit ani-slide"><span>CONTACTS</span></h2>
           <div class="sec-cont">
             <form class="gform" name="contact" method="post" action="https://script.google.com/macros/s/AKfycbxwfV1E9-y9rcKVAeElv6-wyk_7cDH5n9QIlDVZWoOwJ1CKWRZXQIJw5w/exec">
-              <div class="row">
+              <div class="row ani-slide">
                 <div class="col-md-1">
                   <label for="usr">이름</label>
                 </div>
@@ -208,7 +208,7 @@
                   <textarea class="form-control" name="commet" rows="5" id="comment" placeholder="문의하실 내용을 적어주세요.">가라가라 메일아 가라~~~~</textarea>
                 </div>
               </div>
-              <div class="row mt-4">
+              <div class="row mt-4 ani-slide">
                 <div class="col-md-2 offset-md-4">
                   <button type="submit" class="btn btn-danger">보내기</button>
                 </div>

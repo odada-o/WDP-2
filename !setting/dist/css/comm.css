@@ -242,6 +242,42 @@ input[type=password] {
   width: 100%;
 }
 
+.ani-slide {
+  visibility: hidden;
+}
+
+.ani-slide.ani-top {
+  visibility: visible;
+  -webkit-animation: object-slide 1s;
+          animation: object-slide 1s;
+}
+
+@-webkit-keyframes object-slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes object-slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 header {
   position: fixed;
   top: 0;
@@ -260,6 +296,11 @@ header .navbar-brand {
 
 header.bg-light {
   padding: 5px 150px 10px;
+}
+
+.bg-light #collapsibleNavbar .nav-link.active {
+  color: #ff6347;
+  font-weight: bold;
 }
 
 #collapsibleNavbar .nav-link {
