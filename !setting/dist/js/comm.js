@@ -1,4 +1,9 @@
 $(function(){
+  // header mouseenter
+  $('header').mouseenter(function(){
+    $(this).addClass('active')
+  })
+
   // header sticky
   let $window = $(window)
   $window.scroll(function(){
@@ -87,7 +92,7 @@ $(function(){
         let pos = $(this).offset().top,
             winscroll = $(window).scrollTop()
 
-        if(winscroll + 600 > pos){
+        if(winscroll + 700 > pos){
           $(this).addClass('ani-top')
         }
       })
