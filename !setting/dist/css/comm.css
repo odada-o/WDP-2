@@ -284,9 +284,6 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  padding: 20px 0;
-  -webkit-transition: padding 1s;
-  transition: padding 1s;
 }
 
 header .container {
@@ -298,13 +295,8 @@ header .navbar-brand {
   font-size: 30px;
 }
 
-header.bg-light {
-  padding: 5px 0 10px;
-}
-
 header.active {
   background: #fff;
-  padding: 5px 0 10px;
 }
 
 header.active .navbar-brand {
@@ -315,8 +307,16 @@ header.active .navbar-brand:hover {
   color: #000;
 }
 
-header.active #collapsibleNavbar .nav-link {
-  color: #000;
+header .navbar-nav li {
+  position: relative;
+}
+
+header .nav-dep2 {
+  position: absolute;
+  top: 61px;
+  left: 0;
+  right: 0;
+  background: #fff;
 }
 
 .bg-light #collapsibleNavbar .nav-link.active {
@@ -325,12 +325,14 @@ header.active #collapsibleNavbar .nav-link {
 }
 
 #collapsibleNavbar .nav-link {
-  padding: .5rem 2rem;
+  padding: 1.7rem 2rem;
   color: #fff;
+  -webkit-transition: padding .5s;
+  transition: padding .5s;
 }
 
-.bg-light #collapsibleNavbar .nav-link {
-  padding: .5rem 2rem;
+.bg-light #collapsibleNavbar .nav-link, .active #collapsibleNavbar .nav-link {
+  padding: 1.1rem 2rem;
   color: #000;
 }
 

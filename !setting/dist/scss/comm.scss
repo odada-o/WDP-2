@@ -39,8 +39,6 @@
 // header
 header {
   position: fixed;top: 0;left: 0;right: 0;z-index: 10;
-  padding: 20px 0;
-  transition: padding 1s;
   .container {
     padding: 0;
   }
@@ -48,18 +46,19 @@ header {
     display: block;
     font-size: 30px;
   }
-  &.bg-light {
-    padding: 5px 0 10px;
-  }
   &.active {
-    background: $w;padding: 5px 0 10px;
+    background: $w;
     .navbar-brand {
       color: $b;
       &:hover {color: $b;}
     }
-    #collapsibleNavbar {
-      .nav-link {color: $b;}
-    }
+  }
+  .navbar-nav li {
+    position: relative;
+  }
+  .nav-dep2 {
+    position: absolute;top: 61px;left: 0;right: 0;
+    background: $w;
   }
 }
 .bg-light #collapsibleNavbar {
@@ -72,15 +71,16 @@ header {
 
 #collapsibleNavbar {
   .nav-link {
-    padding: .5rem 2rem;
+    padding: 1.7rem 2rem;
     color: $w;
+    transition: padding .5s;
   }
 }
 // 스크롤 시
-.bg-light {
+.bg-light, .active {
   #collapsibleNavbar {
     .nav-link {
-      padding: .5rem 2rem;
+      padding: 1.1rem 2rem;
       color: $b;
     }
   }
