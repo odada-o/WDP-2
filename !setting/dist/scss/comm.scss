@@ -51,7 +51,8 @@ header {
   }
   .nav-dep2 {
     position: absolute;top: 61px;left: 0;right: 0;
-    background: $w;
+    overflow: hidden; max-height: 0; transition: all .5s;
+    padding: 1rem 0;
     a {
       display: block;
       padding: .5rem 0; 
@@ -71,6 +72,13 @@ header {
 }
 
 #collapsibleNavbar {
+  &::before {
+    content: '';
+    position: fixed;top: 61px;left: 0;right: 0;
+    height: 0; transition: all .5s;
+    background: $w;
+    border: none;
+  }
   .nav-link {
     padding: 1.7rem 3rem;
     color: $w;
@@ -85,12 +93,7 @@ header {
     &:hover {color: $b;}
   }
   #collapsibleNavbar {
-    &::before {
-      content: '';
-      position: fixed;top: 61px;left: 0;right: 0;
-      height: 175px;
-      background: $w;
-    }
+    &::before {height: 200px;border-top: 1px solid #ededed;}
     .nav-link {
       padding: 1.1rem 3rem;
       color: $b;
@@ -98,6 +101,9 @@ header {
         color: $tomato;
       }
     }
+  }
+  .nav-dep2 {
+    max-height: 200px;
   }
 }
 

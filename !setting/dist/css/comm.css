@@ -304,7 +304,11 @@ header .nav-dep2 {
   top: 61px;
   left: 0;
   right: 0;
-  background: #fff;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  padding: 1rem 0;
 }
 
 header .nav-dep2 a {
@@ -321,6 +325,19 @@ header .nav-dep2 a:hover {
 .bg-light #collapsibleNavbar .nav-link.active {
   color: #ff6347;
   font-weight: bold;
+}
+
+#collapsibleNavbar::before {
+  content: '';
+  position: fixed;
+  top: 61px;
+  left: 0;
+  right: 0;
+  height: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background: #fff;
+  border: none;
 }
 
 #collapsibleNavbar .nav-link {
@@ -343,13 +360,8 @@ header .nav-dep2 a:hover {
 }
 
 .bg-light #collapsibleNavbar::before, .active #collapsibleNavbar::before {
-  content: '';
-  position: fixed;
-  top: 61px;
-  left: 0;
-  right: 0;
-  height: 175px;
-  background: #fff;
+  height: 200px;
+  border-top: 1px solid #ededed;
 }
 
 .bg-light #collapsibleNavbar .nav-link, .active #collapsibleNavbar .nav-link {
@@ -359,6 +371,10 @@ header .nav-dep2 a:hover {
 
 .bg-light #collapsibleNavbar .nav-link:hover, .active #collapsibleNavbar .nav-link:hover {
   color: #ff6347;
+}
+
+.bg-light .nav-dep2, .active .nav-dep2 {
+  max-height: 200px;
 }
 
 .swiper-container {
