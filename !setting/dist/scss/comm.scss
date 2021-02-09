@@ -46,42 +46,57 @@ header {
     display: block;
     font-size: 30px;
   }
-  &.active {
-    background: $w;
-    .navbar-brand {
-      color: $b;
-      &:hover {color: $b;}
-    }
-  }
   .navbar-nav li {
     position: relative;
   }
   .nav-dep2 {
     position: absolute;top: 61px;left: 0;right: 0;
     background: $w;
+    a {
+      display: block;
+      padding: .5rem 0; 
+      color: rgba($b, .6); text-align: center;
+      &:hover {
+        color: rgba($tomato,.6);
+      }
+    }
   }
 }
 .bg-light #collapsibleNavbar {
   .nav-link{
     &.active {
-      color: #ff6347; font-weight: bold;
+      color: $tomato; font-weight: bold;
     }
   }
 }
 
 #collapsibleNavbar {
   .nav-link {
-    padding: 1.7rem 2rem;
+    padding: 1.7rem 3rem;
     color: $w;
     transition: padding .5s;
   }
 }
-// 스크롤 시
+// 스크롤 시, 마우스 오버시
 .bg-light, .active {
+  background: #f8f9fa;
+  .navbar-brand {
+    color: $b;
+    &:hover {color: $b;}
+  }
   #collapsibleNavbar {
+    &::before {
+      content: '';
+      position: fixed;top: 61px;left: 0;right: 0;
+      height: 175px;
+      background: $w;
+    }
     .nav-link {
-      padding: 1.1rem 2rem;
+      padding: 1.1rem 3rem;
       color: $b;
+      &:hover {
+        color: $tomato;
+      }
     }
   }
 }

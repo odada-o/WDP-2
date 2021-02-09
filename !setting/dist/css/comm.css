@@ -295,18 +295,6 @@ header .navbar-brand {
   font-size: 30px;
 }
 
-header.active {
-  background: #fff;
-}
-
-header.active .navbar-brand {
-  color: #000;
-}
-
-header.active .navbar-brand:hover {
-  color: #000;
-}
-
 header .navbar-nav li {
   position: relative;
 }
@@ -319,21 +307,58 @@ header .nav-dep2 {
   background: #fff;
 }
 
+header .nav-dep2 a {
+  display: block;
+  padding: .5rem 0;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+header .nav-dep2 a:hover {
+  color: rgba(255, 99, 71, 0.6);
+}
+
 .bg-light #collapsibleNavbar .nav-link.active {
   color: #ff6347;
   font-weight: bold;
 }
 
 #collapsibleNavbar .nav-link {
-  padding: 1.7rem 2rem;
+  padding: 1.7rem 3rem;
   color: #fff;
   -webkit-transition: padding .5s;
   transition: padding .5s;
 }
 
-.bg-light #collapsibleNavbar .nav-link, .active #collapsibleNavbar .nav-link {
-  padding: 1.1rem 2rem;
+.bg-light, .active {
+  background: #f8f9fa;
+}
+
+.bg-light .navbar-brand, .active .navbar-brand {
   color: #000;
+}
+
+.bg-light .navbar-brand:hover, .active .navbar-brand:hover {
+  color: #000;
+}
+
+.bg-light #collapsibleNavbar::before, .active #collapsibleNavbar::before {
+  content: '';
+  position: fixed;
+  top: 61px;
+  left: 0;
+  right: 0;
+  height: 175px;
+  background: #fff;
+}
+
+.bg-light #collapsibleNavbar .nav-link, .active #collapsibleNavbar .nav-link {
+  padding: 1.1rem 3rem;
+  color: #000;
+}
+
+.bg-light #collapsibleNavbar .nav-link:hover, .active #collapsibleNavbar .nav-link:hover {
+  color: #ff6347;
 }
 
 .swiper-container {
