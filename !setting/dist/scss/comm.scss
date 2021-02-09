@@ -51,8 +51,8 @@ header {
   }
   .nav-dep2 {
     position: absolute;top: 61px;left: 0;right: 0;
-    overflow: hidden; max-height: 0; transition: all .5s;
-    padding: 1rem 0;
+    overflow: hidden; max-height: 0; transition: height .5s;
+    padding: 0;opacity: 0;
     a {
       display: block;
       padding: .5rem 0; 
@@ -86,6 +86,15 @@ header {
   }
 }
 // 스크롤 시, 마우스 오버시
+.active {
+  #collapsibleNavbar {
+    &::before {height: 200px;border-top: 1px solid #ededed;}
+  }
+  .nav-dep2 {
+    max-height: 200px;
+    opacity: 1;
+  }
+}
 .bg-light, .active {
   background: #f8f9fa;
   .navbar-brand {
@@ -93,7 +102,6 @@ header {
     &:hover {color: $b;}
   }
   #collapsibleNavbar {
-    &::before {height: 200px;border-top: 1px solid #ededed;}
     .nav-link {
       padding: 1.1rem 3rem;
       color: $b;
@@ -101,9 +109,6 @@ header {
         color: $tomato;
       }
     }
-  }
-  .nav-dep2 {
-    max-height: 200px;
   }
 }
 

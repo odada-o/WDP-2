@@ -306,9 +306,10 @@ header .nav-dep2 {
   right: 0;
   overflow: hidden;
   max-height: 0;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  padding: 1rem 0;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+  padding: 0;
+  opacity: 0;
 }
 
 header .nav-dep2 a {
@@ -347,6 +348,16 @@ header .nav-dep2 a:hover {
   transition: padding .5s;
 }
 
+.active #collapsibleNavbar::before {
+  height: 200px;
+  border-top: 1px solid #ededed;
+}
+
+.active .nav-dep2 {
+  max-height: 200px;
+  opacity: 1;
+}
+
 .bg-light, .active {
   background: #f8f9fa;
 }
@@ -359,11 +370,6 @@ header .nav-dep2 a:hover {
   color: #000;
 }
 
-.bg-light #collapsibleNavbar::before, .active #collapsibleNavbar::before {
-  height: 200px;
-  border-top: 1px solid #ededed;
-}
-
 .bg-light #collapsibleNavbar .nav-link, .active #collapsibleNavbar .nav-link {
   padding: 1.1rem 3rem;
   color: #000;
@@ -371,10 +377,6 @@ header .nav-dep2 a:hover {
 
 .bg-light #collapsibleNavbar .nav-link:hover, .active #collapsibleNavbar .nav-link:hover {
   color: #ff6347;
-}
-
-.bg-light .nav-dep2, .active .nav-dep2 {
-  max-height: 200px;
 }
 
 .swiper-container {

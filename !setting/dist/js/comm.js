@@ -1,7 +1,11 @@
 $(function(){
   // header mouseenter
-  $('header').mouseenter(function(){
-    $(this).addClass('active')
+  $('header')
+  .mouseenter(function(){
+    $('header').addClass('active')
+  })
+  .mouseout(function(){
+    $('header').removeClass('active')
   })
 
   // header sticky
