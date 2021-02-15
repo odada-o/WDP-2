@@ -337,6 +337,11 @@ body {
 
 .sec-how .lst-how li:first-child {
   width: 228px;
-  background-position: 0 0;
+  background-position: 0 -170px;
+}
+
+.sec-how .lst-how li:nth-child(2) {
+  width: 232px;
+  background-position: git  0;
 }
 /*# sourceMappingURL=comm.css.map */
