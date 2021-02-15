@@ -146,11 +146,11 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
   }
   
   /* 이미지 스프라이트 */
-  
   .img_g {
     display: inline-block;
     overflow: hidden;
-    background: url(../../images/comm/img-comm.png) no-repeat;
+    background-image: url(../../images/comm.png);
+    background-repeat: no-repeat;
     vertical-align: top;
   }
   

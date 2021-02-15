@@ -139,7 +139,8 @@ input[type=password] {
 .img_g {
   display: inline-block;
   overflow: hidden;
-  background: url(../../images/comm/img-comm.png) no-repeat;
+  background-image: url(../../images/comm.png);
+  background-repeat: no-repeat;
   vertical-align: top;
 }
 
@@ -226,14 +227,50 @@ body {
 .container {
   position: relative;
   max-width: 820px;
+  margin: 0 auto;
   padding: 76px 0 120px;
 }
 
+.wrap-tit h2 {
+  font-size: 1.625em;
+  color: #fff;
+}
+
+.wrap-tit h2::after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 3px;
+  margin: 58px 0 22px;
+  background: #fff;
+}
+
+.wrap-tit p {
+  color: #fff;
+}
+
 .btn-g {
+  display: inline-block;
   height: 63px;
+  padding: 8px 13px;
+  margin-top: 40px;
   background: #000;
   border: 1px solid #666;
-  border-radius: 20px;
+  border-radius: 8px;
+}
+
+.btn-g span {
+  width: 180px;
+  height: 43px;
+  text-indent: -9999px;
+}
+
+.btn-g.btn-google span {
+  background-position: -15px -82px;
+}
+
+.btn-g.btn-apple span {
+  background-position: -235px -83px;
 }
 
 .jumbotron-intro {
@@ -278,11 +315,10 @@ body {
 }
 
 .jumbotron-intro .col-left h1 {
-  display: block;
   width: 365px;
   height: 72px;
   margin: 27px 0 39px;
-  background: url(../../images/comm.png) 0 0 no-repeat;
+  background-position: 0 0;
   text-indent: -9999px;
 }
 
@@ -293,53 +329,5 @@ body {
 
 .sec-how {
   background: #323a47;
-}
-
-.sec-how h2 {
-  font-size: 1.625em;
-  color: #fff;
-}
-
-.sec-how ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 67px -27px 0 -27px;
-}
-
-.sec-how ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 228px;
-  height: 254px;
-  background-size: contain;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-
-.sec-how ul li:first-child {
-  background-image: url(../../images/img-feature1.png);
-}
-
-.sec-how ul li:nth-child(2) {
-  background-image: url(../../images/img-feature2.png);
-}
-
-.sec-how ul li:last-child {
-  background-image: url(../../images/img-feature3.png);
-}
-
-.sec-how ul a {
-  color: #fff;
 }
 /*# sourceMappingURL=comm.css.map */
