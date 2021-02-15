@@ -229,6 +229,13 @@ body {
   padding: 76px 0 120px;
 }
 
+.btn-g {
+  height: 63px;
+  background: #000;
+  border: 1px solid #666;
+  border-radius: 20px;
+}
+
 .jumbotron-intro {
   height: 638px;
   padding-top: 71px;
@@ -272,11 +279,10 @@ body {
 
 .jumbotron-intro .col-left h1 {
   display: block;
-  width: 369px;
-  height: 75px;
+  width: 365px;
+  height: 72px;
   margin: 27px 0 39px;
-  background: url(../../images/logo-bullbull.png) 0 0 no-repeat;
-  background-size: contain;
+  background: url(../../images/comm.png) 0 0 no-repeat;
   text-indent: -9999px;
 }
 

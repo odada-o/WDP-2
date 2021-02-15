@@ -9,7 +9,11 @@
 }
 
 // comm
-
+.btn-g {
+  height: 63px;
+  background: $b;
+  border: 1px solid #666; border-radius: 20px;
+}
 
 
 // jumbotron-intro
@@ -40,16 +44,14 @@
       }
       h1 {
         display: block;
-        width: 369px; height: 75px; margin: 27px 0 39px;
-        background: url(../../images/logo-bullbull.png) 0 0 no-repeat;
-        background-size: contain;
+        width: 365px; height: 72px; margin: 27px 0 39px;
+        background: url(../../images/comm.png) 0 0 no-repeat;
         text-indent: -9999px;
       }
       p {
           width: 420px;
           color: #fff;
       }
-      
     }
 }
 
