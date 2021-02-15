@@ -330,4 +330,13 @@ body {
 .sec-how {
   background: #323a47;
 }
+
+.sec-how .lst-how li {
+  height: 197px;
+}
+
+.sec-how .lst-how li:first-child {
+  width: 228px;
+  background-position: 0 0;
+}
 /*# sourceMappingURL=comm.css.map */

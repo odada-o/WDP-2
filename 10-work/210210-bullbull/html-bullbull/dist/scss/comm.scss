@@ -87,7 +87,13 @@
 .sec-how {
   background: $charcoal-grey;
   .lst-how {
-    
+    li {
+      height: 197px;
+      &:first-child {
+        width: 228px;
+        background-position: 0 0;
+      }
+    }
   }
 }
 
