@@ -109,4 +109,28 @@ $(function(){
     // skrollr
     var s = skrollr.init();
 
+    // prizes
+    $('.sec-prizes').each(function(){
+      let num = 0
+      // 첫번째 버튼 활성화
+      $(this).find('.lst-prize li').eq(num).addClass('on')
+      $(this).find('.col-img img').attr({
+        'src': './images/img-jackpots'+num+'.gif'
+      })
+
+      // li를 클릭했을 때
+      $(this).find('.lst-prize li').click(function(){
+        $('.lst-prize li').removeClass('on')
+
+        let index = $('.lst-prize li').index(this)
+
+        $('.lst-prize li').eq(index).addClass('on')
+        $('.col-img img').attr({
+          'src' : './images/img-jackpots'+index+'.gif'
+        })
+
+      })
+
+    })
+
 })

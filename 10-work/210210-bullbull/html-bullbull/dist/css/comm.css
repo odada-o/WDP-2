@@ -222,6 +222,19 @@ input[type=password] {
   padding: 76px 0 120px;
 }
 
+.wrap-tit.center {
+  text-align: center;
+}
+
+.wrap-tit.center h2::after {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wrap-tit.center p {
+  opacity: .5;
+}
+
 .wrap-tit h2 {
   font-size: 1.625em;
   color: #fff;
@@ -488,5 +501,11 @@ input[type=password] {
 
 .sec-prizes .col-txt * {
   color: #fff;
+}
+
+.sec-referral {
+  position: relative;
+  z-index: 100;
+  background: #323a47;
 }
 /*# sourceMappingURL=comm.css.map */

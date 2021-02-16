@@ -10,6 +10,15 @@
 
 // comm
 .wrap-tit {
+  &.center {
+    text-align: center;
+    h2::after {
+      margin-right: auto; margin-left: auto;
+    }
+    p {
+      opacity: .5;
+    }
+  }
   h2 {
     font-size: 1.625em; color: #fff;
     &::after {
@@ -184,4 +193,8 @@
           color: #fff;
       }
   }
+}
+.sec-referral {
+  position: relative; z-index: 100;
+  background: $charcoal-grey;
 }
