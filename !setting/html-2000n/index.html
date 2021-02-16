@@ -24,16 +24,70 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-  <div id="u-skip">
-    <a href="#gnb">주메뉴 바로가기</a>
-    <a href="#main">본문 바로가기</a>
-  </div>
-
   <div class="wrap">
     <!-- header -->
     <!-- 스크롤 시 .bg-light .navbar-light 추가 -->
     <!-- 마우스 오버시 .active 추가 -->
-    <header class="navbar-dark"  include-html="layout/header.html"></header>
+    <header id="header" class="navbar-dark">
+      <div id="u-skip">
+        <a href="#gnb">주메뉴 바로가기</a>
+        <a href="#main">본문 바로가기</a>
+      </div>
+      
+      <nav class="navbar navbar-expand-md container">
+        <!-- Brand -->
+        <h1>
+          <a class="navbar-brand" href="index.html">logo</a>
+        </h1>
+    
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#gnb">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse justify-content-center" id="gnb">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#section1">menu1</a>
+              <ul class="nav-dep2">
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu1-1</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section2">menu2</a>
+              <ul class="nav-dep2">
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu2-1</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section3">menu3</a>
+              <ul class="nav-dep2">
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu3-1</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu4.html">menu4</a>
+              <ul class="nav-dep2">
+                <li><a href="#">menu4-1</a></li>
+                <li><a href="#">menu4-1</a></li>
+                <li><a href="#">menu4-1</a></li>
+                <li><a href="#">menu4-1</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <!-- //header -->
     <!-- slide -->
     <!-- Swiper -->
@@ -214,7 +268,6 @@
   <script src="./dist/js/form-submission-handler.js"></script>
   <script src="./dist/vendor/include.js"></script>
   <script src="./dist/js/comm.js"></script>
-  <!-- ie9 이하 버전에서 잘 보이도록 추가 -->
   <!--[if lt IE 9]>
       <script src="./dist/vendor/html5.js"></script>
       <script src="./dist/vendor/respond.min.js"></script>

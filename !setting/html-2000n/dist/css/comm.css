@@ -278,117 +278,122 @@ input[type=password] {
   }
 }
 
-header {
+#header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
+  height: 80px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
-header .container {
+#header .container {
   padding: 0;
 }
 
-header .navbar-brand {
+#header .navbar-brand {
   display: block;
   font-size: 30px;
 }
 
-#collapsibleNavbar {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  margin: 0 auto;
+#header.active {
+  height: 300px;
+  background: #fff;
 }
 
-#collapsibleNavbar:hover::before, #collapsibleNavbar:focus::before, #collapsibleNavbar.on::before {
+#header.active::before {
+  content: '';
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #eee;
+}
+
+#header.active #gnb::before {
   height: 200px;
   border-top: 1px solid #ededed;
 }
 
-#collapsibleNavbar:hover .nav-dep2, #collapsibleNavbar:focus .nav-dep2, #collapsibleNavbar.on .nav-dep2 {
+#header.active #gnb .nav-dep2 {
+  display: block;
+  max-height: 200px;
+  padding: .8rem 0;
+  opacity: 1;
+}
+
+#header.bg-light, #header.active {
+  background: #f8f9fa;
+}
+
+#header.bg-light .navbar-brand, #header.active .navbar-brand {
+  color: #000;
+}
+
+#header.bg-light .navbar-brand:hover, #header.active .navbar-brand:hover {
+  color: #000;
+}
+
+#header.bg-light #gnb .nav-link, #header.active #gnb .nav-link {
+  color: #000;
+}
+
+#header.bg-light #gnb .nav-link:hover, #header.bg-light #gnb .nav-link.active, #header.active #gnb .nav-link:hover, #header.active #gnb .nav-link.active {
+  color: #ff6347;
+}
+
+#gnb {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin: 0 auto;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#gnb:hover::before, #gnb:focus::before, #gnb.on::before {
+  height: 200px;
+  border-top: 1px solid #ededed;
+}
+
+#gnb:hover .nav-dep2, #gnb:focus .nav-dep2, #gnb.on .nav-dep2 {
   max-height: 200px;
   opacity: 1;
 }
 
-#collapsibleNavbar::before {
-  content: '';
-  position: fixed;
-  top: 80px;
-  left: 0;
-  right: 0;
-  height: 0;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  background: #fff;
-  border: none;
-}
-
-#collapsibleNavbar .navbar-nav li {
+#gnb .navbar-nav li {
   position: relative;
 }
 
-#collapsibleNavbar .nav-link {
+#gnb .nav-link {
   padding: 1.7rem 3rem;
   color: #fff;
   -webkit-transition: padding .5s;
   transition: padding .5s;
 }
 
-#collapsibleNavbar .nav-dep2 {
+#gnb .nav-dep2 {
+  display: none;
   position: absolute;
   top: 80px;
   left: 0;
   right: 0;
-  overflow: hidden;
-  max-height: 0;
-  -webkit-transition: all .5s;
-  transition: all .5s;
   padding: 0;
   opacity: 0;
 }
 
-#collapsibleNavbar .nav-dep2 a {
+#gnb .nav-dep2 a {
   display: block;
   padding: .5rem 0;
   color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
 
-#collapsibleNavbar .nav-dep2 a:hover {
+#gnb .nav-dep2 a:hover {
   color: rgba(255, 99, 71, 0.6);
-}
-
-.active #collapsibleNavbar::before {
-  height: 200px;
-  border-top: 1px solid #ededed;
-}
-
-.active .nav-dep2 {
-  max-height: 200px;
-  padding: .8rem 0;
-  opacity: 1;
-}
-
-.bg-light, .active {
-  background: #f8f9fa;
-}
-
-.bg-light .navbar-brand, .active .navbar-brand {
-  color: #000;
-}
-
-.bg-light .navbar-brand:hover, .active .navbar-brand:hover {
-  color: #000;
-}
-
-.bg-light #collapsibleNavbar .nav-link, .active #collapsibleNavbar .nav-link {
-  color: #000;
-}
-
-.bg-light #collapsibleNavbar .nav-link:hover, .bg-light #collapsibleNavbar .nav-link.active, .active #collapsibleNavbar .nav-link:hover, .active #collapsibleNavbar .nav-link.active {
-  color: #ff6347;
 }
 
 .swiper-container {

@@ -37,8 +37,9 @@
 }
 
 // header
-header {
+#header {
   position: fixed;top: 0;left: 0;right: 0;z-index: 10;
+  height: 80px; transition: all .2s; 
   .container {
     padding: 0;
   }
@@ -46,12 +47,47 @@ header {
     display: block;
     font-size: 30px;
   }
+  // 마우스 오버시
+&.active {
+  height: 300px;background: #fff;
+  &::before {
+    content: '';
+    position: absolute;top: 80px;left: 0;right: 0;
+    height: 1px; background: #eee;
+  }
+  #gnb {
+    &::before {height: 200px;border-top: 1px solid #ededed;}
+    .nav-dep2 {
+      display: block;
+      // top: 60px;
+      max-height: 200px;padding: .8rem 0;
+      opacity: 1;
+    }
+  }
+}
+// 스크롤 시
+&.bg-light, &.active {
+  background: #f8f9fa;
+  .navbar-brand {
+    color: $b;
+    &:hover {color: $b;}
+  }
+  #gnb {
+    .nav-link {
+      // padding: 1.1rem 3rem;
+      color: $b;
+      &:hover, &.active {
+        color: $tomato;
+      }
+    }
+  }
+}
 }
 
 // navgation
-
-#collapsibleNavbar {
+#gnb {
   flex-grow: 0; margin: 0 auto;
+  transition: all .5s;
   &:hover, &:focus, &.on {
     &::before {height: 200px;border-top: 1px solid #ededed;}
     .nav-dep2 {
@@ -60,13 +96,13 @@ header {
       opacity: 1;
     }
   }
-  &::before {
-    content: '';
-    position: fixed;top: 80px;left: 0;right: 0;
-    height: 0; transition: all .5s;
-    background: $w;
-    border: none;
-  }
+  // &::before {
+  //   content: '';
+  //   position: fixed;top: 80px;left: 0;right: 0;
+  //   height: 0; transition: all .5s;
+  //   background: $w;
+  //   border: none;
+  // }
   .navbar-nav li {
     position: relative;
   }
@@ -76,8 +112,9 @@ header {
     transition: padding .5s;
   }
   .nav-dep2 {
+    display: none;
     position: absolute;top: 80px;left: 0;right: 0;
-    overflow: hidden; max-height: 0; transition: all .5s;
+    // overflow: hidden; max-height: 0; transition: all .5s;
     padding: 0;opacity: 0;
     a {
       display: block;
@@ -90,34 +127,7 @@ header {
   }
 }
 
-// 마우스 오버시
-.active {
-  #collapsibleNavbar {
-    &::before {height: 200px;border-top: 1px solid #ededed;}
-  }
-  .nav-dep2 {
-    // top: 60px;
-    max-height: 200px;padding: .8rem 0;
-    opacity: 1;
-  }
-}
-// 스크롤 시, 마우스 오버시
-.bg-light, .active {
-  background: #f8f9fa;
-  .navbar-brand {
-    color: $b;
-    &:hover {color: $b;}
-  }
-  #collapsibleNavbar {
-    .nav-link {
-      // padding: 1.1rem 3rem;
-      color: $b;
-      &:hover, &.active {
-        color: $tomato;
-      }
-    }
-  }
-}
+
 
 // swiper 공통
 .swiper-container {

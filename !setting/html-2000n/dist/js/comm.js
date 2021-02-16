@@ -1,12 +1,15 @@
 $(function(){
 
-  // header mouseenter
-  $('.navbar-nav')
-  .mouseenter(function(){
-    $('header').addClass('active')
+  // header
+  $('#gnb').on('mouseenter', function(){
+    $('#header').addClass('active')
   })
+  $('#gnb').on('mouseleave', function(){
+    $('#header').removeClass('active')
+  })
+
   // .mouseout(function(){
-  //   $('header').removeClass('active')
+  //   $('#header').removeClass('active')
   // })
 
   // header sticky
@@ -107,3 +110,24 @@ $(function(){
     includeHTML()
 
 })
+
+!function($) {
+	'use strict';
+
+	$(function(){
+		initUI.setup();
+
+		// 퍼블리싱 전용 (주의!!! 개발 완료시 모두 삭제)/////////////////////////////
+		if(location.port == '8888' || location.hostname.indexOf('uxdev.etribe.co.kr') != -1){
+			header.init(); // 개발언어로 변경시 이 부분 삭제 해야 합니다. (개발언어로 인클루드 필요.)
+			footer.init(); // 개발언어로 변경시 이 부분 삭제 해야 합니다. (개발언어로 인클루드 필요.)
+
+
+			// mac os 일 경우 html 태그에 mac_os 클래스 붙임
+			if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+				$("html").addClass("mac_os");
+			}
+		}
+		/////////////////////////////////////////////////////////////////////////////
+	});
+}
