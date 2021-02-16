@@ -106,4 +106,7 @@ $(function(){
     // includeHTML
     includeHTML()
 
+    // skrollr
+    var s = skrollr.init();
+
 })

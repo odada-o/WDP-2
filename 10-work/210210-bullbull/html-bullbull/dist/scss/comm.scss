@@ -123,27 +123,10 @@
 .sec-prizes {
   position: relative;
   background-image: linear-gradient(115deg, #0dccbc, #315db6), url(../../images/bg-coin2.png) ;
-  &::before {
-      content: '';
-      position: absolute;top: -10px;right: 0;
-      display: block;
-      width: 320px; height: 540px;
-      background: url(../../images/bg-coin2.png) 0 0 no-repeat;
-      background-size: contain;
-      opacity: .5;
-  }
-  &::after {
-      content: '';
-      // position 가운데 정렬
-      position: absolute;bottom: -230px;left: 50%; z-index: 80;
-      // margin-left: -285px;
-      // transform: translate(-50% , -50%);
-      transform: translateX(-50%);
-      display: block;
-      width: 570px; height: 540px;
-      background: url(../../images/bg-coin3.png) 0 0 no-repeat;
-      background-size: contain;
-      opacity: .3;
+  .ico-coin1 {position: absolute;top: -10px;right: 0;opacity: .5;}
+  .ico-coin2 {
+    position: absolute;bottom: -230px;left: 50%; z-index: 80;
+    transform: translateX(-50%);opacity: .3;
   }
   .container {
       display: flex; justify-content: space-between;

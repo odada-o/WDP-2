@@ -375,32 +375,20 @@ input[type=password] {
   background-image: linear-gradient(115deg, #0dccbc, #315db6), url(../../images/bg-coin2.png);
 }
 
-.sec-prizes::before {
-  content: '';
+.sec-prizes .ico-coin1 {
   position: absolute;
   top: -10px;
   right: 0;
-  display: block;
-  width: 320px;
-  height: 540px;
-  background: url(../../images/bg-coin2.png) 0 0 no-repeat;
-  background-size: contain;
   opacity: .5;
 }
 
-.sec-prizes::after {
-  content: '';
+.sec-prizes .ico-coin2 {
   position: absolute;
   bottom: -230px;
   left: 50%;
   z-index: 80;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  display: block;
-  width: 570px;
-  height: 540px;
-  background: url(../../images/bg-coin3.png) 0 0 no-repeat;
-  background-size: contain;
   opacity: .3;
 }
 
