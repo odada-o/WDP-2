@@ -123,7 +123,7 @@
 .sec-prizes {
   position: relative;
   background-image: linear-gradient(115deg, #0dccbc, #315db6), url(../../images/bg-coin2.png) ;
-  .ico-coin1 {position: absolute;top: -10px;right: 0;opacity: .5;}
+  .ico-coin1 {position: absolute;top: -10px;right: 0;opacity: .5;transition: all .5s;}
   .ico-coin2 {
     position: absolute;bottom: -230px;left: 50%; z-index: 80;
     transform: translateX(-50%);opacity: .3;

@@ -380,6 +380,8 @@ input[type=password] {
   top: -10px;
   right: 0;
   opacity: .5;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .sec-prizes .ico-coin2 {
