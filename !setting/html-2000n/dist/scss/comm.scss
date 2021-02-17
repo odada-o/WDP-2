@@ -38,96 +38,85 @@
 
 // header
 #header {
-  position: fixed;top: 0;left: 0;right: 0;z-index: 10;
-  height: 80px; transition: all .2s; 
+  position: fixed;top: 0;left: 0;right: 0;z-index: 10000;
   .container {
     padding: 0;
   }
-  .navbar-brand {
-    display: block;
-    font-size: 30px;
-  }
-  // 마우스 오버시
-&.active {
-  height: 300px;background: #fff;
-  &::before {
-    content: '';
-    position: absolute;top: 80px;left: 0;right: 0;
-    height: 1px; background: #eee;
-  }
-  #gnb {
-    &::before {height: 200px;border-top: 1px solid #ededed;}
-    .nav-dep2 {
-      display: block;
-      // top: 60px;
-      max-height: 200px;padding: .8rem 0;
-      opacity: 1;
-    }
-  }
 }
-// 스크롤 시
-&.bg-light, &.active {
-  background: #f8f9fa;
-  .navbar-brand {
-    color: $b;
-    &:hover {color: $b;}
-  }
-  #gnb {
-    .nav-link {
-      // padding: 1.1rem 3rem;
-      color: $b;
-      &:hover, &.active {
-        color: $tomato;
-      }
-    }
-  }
-}
-}
-
-// navgation
 #gnb {
-  flex-grow: 0; margin: 0 auto;
-  transition: all .5s;
-  &:hover, &:focus, &.on {
-    &::before {height: 200px;border-top: 1px solid #ededed;}
-    .nav-dep2 {
-      // top: 60px;
-      max-height: 200px;
-      opacity: 1;
+  display: flex; justify-content: space-between;
+  height: 91px;
+  // border-bottom: 1px solid $border_color;
+  .logo {
+    a {
+      display: block; height: 100%; padding: 0 20px;
+      font-size: 1.8rem; line-height: 80px;
     }
   }
-  // &::before {
-  //   content: '';
-  //   position: fixed;top: 80px;left: 0;right: 0;
-  //   height: 0; transition: all .5s;
-  //   background: $w;
-  //   border: none;
-  // }
-  .navbar-nav li {
-    position: relative;
+  nav {
+    
+    .nav_bg {
+      overflow: hidden;display: block;
+      position: fixed;top: 90px;left: 0;z-index: 900;
+      width: 100%;height: 0;background: #fff;
+      transition: height .2s;
+      content: "";
+      &.on {
+        height: 219px;
+        // border-bottom: 1px solid $blue;
+      }
+    }
+    &.active {
+      .nav_depth2 {
+        height: auto;opacity: 1;
+      }
+      .nav_bg {
+        height: 219px;
+        // border-bottom: 1px solid $blue;
+      }
+    }
+
   }
-  .nav-link {
-    padding: 1.7rem 3rem;
-    color: $w;
-    transition: padding .5s;
+  .nav_depth1 {
+    > li {
+      float: left;position: relative;
+      > a {
+        display: block;
+        padding: 0 50px;
+        font-size: 1rem;font-weight: 500;
+        > span {
+          display: block;
+          height: 90px;line-height: 90px;
+        }
+      }
+      &.on, &:hover, &:focus {
+        > a > span {
+          border-bottom: 2px solid $tomato;
+          color: $tomato;
+        }
+        .nav_depth2 {
+          height: auto;opacity: 1;
+        }
+      }
+    }
   }
-  .nav-dep2 {
-    display: none;
-    position: absolute;top: 80px;left: 0;right: 0;
-    // overflow: hidden; max-height: 0; transition: all .5s;
-    padding: 0;opacity: 0;
-    a {
-      display: block;
-      padding: .5rem 0; 
-      color: rgba($b, .6); text-align: center;
-      &:hover {
-        color: rgba($tomato,.6);
+  .nav_depth2 {
+    position: absolute;top: 110px;left: 0;right: 24px;z-index: 900;
+    overflow: hidden;height: 0;opacity: 0;transition: all .2s;
+    // display: none;
+    > li {
+      > a {
+        display: block;
+        // padding-right: 20px;
+        text-align: right;line-height: 30px;
+        &:hover {
+          // color: $blue;text-decoration: underline;
+        }
       }
     }
   }
 }
-
-
+// ddddd
 
 // swiper 공통
 .swiper-container {

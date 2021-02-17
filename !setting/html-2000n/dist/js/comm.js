@@ -1,12 +1,26 @@
 $(function(){
 
+  //gnb
+  var $navDepth1 = $('#gnb nav');
+
+  //초기화
+  $navDepth1.removeClass('active');
+
+  $navDepth1.on('focusin mouseenter',function(){
+    $(this).addClass('active');
+  });
+  $navDepth1.on('focusout mouseleave',function(){
+    $(this).removeClass('active');
+  });
+
   // header
-  $('#gnb').on('mouseenter', function(){
-    $('#header').addClass('active')
-  })
-  $('#gnb').on('mouseleave', function(){
-    $('#header').removeClass('active')
-  })
+  // $('#gnb').on('focusin mouseenter', function(){
+  //   $('#header').addClass('active')
+  // })
+  // $('#gnb').on('mouseleave', function(){
+  //   $('#header').removeClass('active')
+  // })
+
 
   // .mouseout(function(){
   //   $('#header').removeClass('active')
