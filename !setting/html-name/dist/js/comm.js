@@ -106,7 +106,7 @@ $(function(){
     }
   });
   var swiper = new Swiper('.slide-banner2', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     centeredSlides: true,
@@ -120,12 +120,11 @@ $(function(){
     },
     breakpoints: {
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 40,
-        centeredSlides: false,
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 5,
         spaceBetween: 50,
       },
     }
